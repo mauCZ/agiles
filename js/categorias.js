@@ -5,7 +5,6 @@ let btns = $(".cat");
 $(function () {
   localStorage.clear()
   btns.on("click", function (e) {
-    console.log($(this).attr('id'))
     let idSelected = $(this).attr('id')
     if(idSelected=='cat-deporte'){
       localStorage.setItem('category', 'deporte')

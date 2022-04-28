@@ -1,38 +1,50 @@
 import { preguntas, Pregunta } from "./preguntas.js";
 
+let  preguntaActual, answered = false
 
-let  preguntaActual,
-  answered = false
-
-let preguntasSeleccionadas,i = 0
+let preguntasSeleccionadas,k 
 
 window.preguntas = preguntas
 
 
 $(function () {
-  preguntasSeleccionadas = filterQuestions(localStorage.getItem('category'))
 
-  showRandomQuestion();
+  preguntasSeleccionadas = filterQuestions(localStorage.getItem('category'))
+  k = numeroAleatorio(0,preguntasSeleccionadas.length)
+  preguntaActual = preguntasSeleccionadas[k]
+
+  // showRandomQuestion();
+  showNextQuestion()
   let answer_options = $(".answer");
 
   answer_options.on("click", function (ev) {
+    console
     if (!answered) {
       let icon = $(this).find("i");
 
       let respuesta = ev.target.innerText;
 
+      console.log(preguntaActual)
+      console.log(respuesta)
       if (preguntaActual.esRespuestaCorrecta(respuesta)) {
-
+        console.log(preguntaActual )
+        console.log(respuesta)
         $(this).toggleClass("correct-answer");
         icon.toggleClass("fa-check");
-        setTimeout(showRandomQuestion, 2000);
+        // setTimeout(showRandomQuestion, 2000);
+        // setTimeout(showQuestion(),2000)
+        setTimeout(showNextQuestion(),2000)
 
       } else {
+        console.log(preguntaActual )
+        console.log(respuesta)
 
         $(this).toggleClass("incorrect-answer");
         icon.toggleClass("fa-xmark");
         markCorrectAnswer();
-        setTimeout(showRandomQuestion, 2000);
+        // setTimeout(showRandomQuestion, 2000);
+        // setTimeout(showQuestion(),2000)
+        setTimeout(showNextQuestion(),2000)
 
       }
       answered = true;
@@ -43,7 +55,7 @@ $(function () {
 
 function markCorrectAnswer(){
   let respuestaActual = preguntaActual['respuestas'][preguntaActual.ind]
-  console.log(respuestaActual)
+  // console.log(respuestaActual)
   let answers = $('.answer')
   answers.each(function(){
     if($(this).text() == respuestaActual){
@@ -61,12 +73,33 @@ function answersDefaultStyle() {
   });
 }
 
-function showRandomQuestion() {
+// function showRandomQuestion() {
+//   answered = false
+//   answersDefaultStyle();
+//   let randInd = numeroAleatorio(0, 11);
+//   preguntaActual = preguntasSeleccionadas[randInd];
+//   showQuestion(randInd);
+// }
+
+function showNextQuestion(){
   answered = false
-  answersDefaultStyle();
-  let randInd = numeroAleatorio(0, 11);
-  preguntaActual = preguntas[randInd];
-  showQuestion(randInd);
+  answersDefaultStyle()
+  
+
+  let category = $('.category')
+  let questionElem = $('.question')
+  let answersElems = $('.answer')
+  let selectedCategory = localStorage.getItem('category')
+
+  category.text(selectedCategory.charAt(0).toUpperCase() + selectedCategory.slice(1))
+  questionElem.text(preguntaActual.pregunta)
+  let answers = preguntaActual.respuestas
+  let i = 0
+  answersElems.each(function(){
+    $(this).text(answers[i])
+    $(this).append("<i class='fa-solid fa-normal fa-2x'></i>")
+    i += 1;
+  })
 }
 
 function showQuestion(ind) {
