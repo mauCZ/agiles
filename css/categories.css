@@ -1,0 +1,60 @@
+*,
+::after,
+::before{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body{
+  display: flex;
+  min-height: 100vh;
+  align-items: center;
+  justify-content: center;
+}
+
+main{
+  width: 600px;
+  max-width: 650px;
+}
+h2{
+  text-align: center;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+button{
+  width: 200px;
+  font-size: large;
+  font-family: 'Handlee', cursive;
+}
+button a{
+  display: inline-block;
+  width: 100%;
+  text-decoration: none;
+}
+.categories{
+  padding: 30px 24px;
+  display: grid;
+  grid-template-areas: "arte      ciencias"
+                       "deporte  historia "
+                       "variado   variado";
+  justify-content: center;
+  grid-row-gap: 10px;
+  grid-column-gap: 22px;
+}
+#cat-arte{
+  grid-area: arte;
+}
+#cat-deporte{
+  grid-area: deporte;
+}
+#cat-historia{
+  grid-area: historia;
+}
+#cat-ciencias{
+  grid-area: ciencias;
+}
+#cat-variado{
+  grid-area: variado;
+  width: auto;
+}

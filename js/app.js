@@ -1,15 +1,19 @@
 import { preguntas, Pregunta } from "./preguntas.js";
 
-let indRandom,
-  preguntaActual,
-  answered = false;
+
+let  preguntaActual,
+  answered = false
+
+let preguntasSeleccionadas,i = 0
+
+window.preguntas = preguntas
 
 
 $(function () {
+  preguntasSeleccionadas = filterQuestions(localStorage.getItem('category'))
+
   showRandomQuestion();
   let answer_options = $(".answer");
-
-
 
   answer_options.on("click", function (ev) {
     if (!answered) {
@@ -66,9 +70,13 @@ function showRandomQuestion() {
 }
 
 function showQuestion(ind) {
+  let category = $('.category');
   let selectedQuest = preguntas[ind];
   let questionElem = $(".question");
   let answersElems = $(".answer");
+  let selectedCategory = localStorage.getItem('category')
+
+  category.text(selectedCategory.charAt(0).toUpperCase() + selectedCategory.slice(1))
 
   questionElem.text(selectedQuest.pregunta);
   let answers = selectedQuest.respuestas;
@@ -83,3 +91,12 @@ function showQuestion(ind) {
 function numeroAleatorio(min, max) {
   return Math.floor(Math.random() * (max - min)) + min;
 }
+
+function filterQuestions(category){
+  preguntasSeleccionadas = preguntas.filter(function(pregunta){
+    if(pregunta.obtenerCategoria() == category) return true;
+    return false;
+  })
+  return preguntasSeleccionadas
+}
+

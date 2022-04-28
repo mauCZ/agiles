@@ -1,8 +1,12 @@
 class Pregunta {
-  constructor(pregunta, respuestas, indCorrecto) {
+  constructor(pregunta, respuestas, indCorrecto,categoria) {
     this.pregunta = pregunta;
     this.respuestas = respuestas;
     this.ind = indCorrecto;
+    this.categoria = categoria;
+  }
+  obtenerCategoria(){
+    return this.categoria;
   }
   esRespuestaCorrecta(respuesta) {
     return this.respuestas[this.ind] == respuesta;
@@ -12,6 +16,7 @@ class Pregunta {
   }
 }
 
+
 let pregunta0 = new Pregunta(
   "¿En qué se especializa la cartografía?",
   [
@@ -20,7 +25,8 @@ let pregunta0 = new Pregunta(
     "Es la ciencia que estudia los minerales.",
     "Es la ciencia que estudia los oceanos.",
   ],
-  0
+  0,
+  "variado"
 );
 
 let pregunta1 = new Pregunta(
@@ -31,7 +37,8 @@ let pregunta1 = new Pregunta(
     "Andres de Santa Cruz",
     "Jose Ballivian",
   ],
-  1
+  1,
+  "historia"
 );
 
 let pregunta2 = new Pregunta(
@@ -42,7 +49,8 @@ let pregunta2 = new Pregunta(
     "1939 - 1944",
     "1939 - 1945"
   ],
-  3
+  3,
+  "variado"
 )
 let pregunta3 = new Pregunta(
   "Cual es el rio mas largo del mundo?",
@@ -52,7 +60,8 @@ let pregunta3 = new Pregunta(
     "Rio Nilo",
     "Rio Yangtze"
   ],
-  2
+  2,
+  "ciencias"
 )
 let pregunta4 = new Pregunta(
   "Cuantos huesos tiene el ser humano?",
@@ -62,7 +71,8 @@ let pregunta4 = new Pregunta(
     "206",
     "207"
   ],
-  1
+  1,
+  "variado"
 )
 let pregunta5 = new Pregunta(
   "Cual es el resultado de la operacion 6 / 2 * (1 + 2)?",
@@ -72,7 +82,8 @@ let pregunta5 = new Pregunta(
     "1",
     "2"
   ],
-  2
+  2,
+  "variado"
 )
 let pregunta6 = new Pregunta(
   "Cual es la capital de Bolivia?",
@@ -82,7 +93,8 @@ let pregunta6 = new Pregunta(
     "La Paz",
     "Santa Cruz de la Sierra"
   ],
-  1
+  1,
+  "historia"
 )
 let pregunta7 = new Pregunta(
   "Cual es el planeta mas grande del sistema solar?",
@@ -92,7 +104,8 @@ let pregunta7 = new Pregunta(
     "Sol",
     "Tierra"
   ],
-  1
+  1,
+  "variado"
 )
 let pregunta8 = new Pregunta(
   "Cual es la rama de la biologia que estudia los insectos?",
@@ -102,7 +115,8 @@ let pregunta8 = new Pregunta(
     "Ictiologia",
     "Mastozoologia"
   ],
-  1
+  1,
+  "ciencias"
 )
 let pregunta9 = new Pregunta(
   "Cual de los siguientes animales es el mas veloz?",
@@ -112,7 +126,8 @@ let pregunta9 = new Pregunta(
     "Vencejo",
     "Kanguro"
   ],
-  2
+  2,
+  "ciencias"
 )
 let pregunta10 = new Pregunta(
   "En que anho llego el ser humano a la luna?",
@@ -122,8 +137,10 @@ let pregunta10 = new Pregunta(
     "1970",
     "1971"
   ],
-  1
+  1,
+  "ciencias"
 )
+
 let preguntas = [pregunta0,pregunta1,pregunta2,pregunta3,pregunta4,pregunta5,pregunta6,
                 pregunta7,pregunta8,pregunta9,pregunta10]
 export {preguntas,Pregunta}
