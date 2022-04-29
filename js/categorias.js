@@ -4,6 +4,7 @@ let btns = $(".cat");
 
 $(function () {
   localStorage.clear()
+
   btns.on("click", function (e) {
     let idSelected = $(this).attr('id')
     if(idSelected=='cat-deporte'){
@@ -18,5 +19,6 @@ $(function () {
       localStorage.setItem('category', 'variado')
     }
   });
+
 });
 

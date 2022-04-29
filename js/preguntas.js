@@ -853,5 +853,89 @@ let pa3 = new Pregunta(
 )
 preguntas.push(pa3)
 
+let pa4 = new Pregunta(
+  "Pregunta de arte 1",
+  [
+    "Respuesta 1",
+    "Respuesta 2",
+    "Respuesta 3",
+    "Respuesta 4"
+  ],
+  0,
+  "arte"
+)
+preguntas.push(pa4)
+let pa5 = new Pregunta(
+  "Pregunta de arte 1",
+  [
+    "Respuesta 1",
+    "Respuesta 2",
+    "Respuesta 3",
+    "Respuesta 4"
+  ],
+  0,
+  "arte"
+)
+preguntas.push(pa5)
+let pa6 = new Pregunta(
+  "Pregunta de arte 1",
+  [
+    "Respuesta 1",
+    "Respuesta 2",
+    "Respuesta 3",
+    "Respuesta 4"
+  ],
+  0,
+  "arte"
+)
+preguntas.push(pa6)
+let pa7 = new Pregunta(
+  "Pregunta de arte 1",
+  [
+    "Respuesta 1",
+    "Respuesta 2",
+    "Respuesta 3",
+    "Respuesta 4"
+  ],
+  0,
+  "arte"
+)
+preguntas.push(pa7)
+let pa8 = new Pregunta(
+  "Pregunta de arte 1",
+  [
+    "Respuesta 1",
+    "Respuesta 2",
+    "Respuesta 3",
+    "Respuesta 4"
+  ],
+  0,
+  "arte"
+)
+preguntas.push(pa8)
+let pa9 = new Pregunta(
+  "Pregunta de arte 1",
+  [
+    "Respuesta 1",
+    "Respuesta 2",
+    "Respuesta 3",
+    "Respuesta 4"
+  ],
+  0,
+  "arte"
+)
+preguntas.push(pa9)
+let pa10 = new Pregunta(
+  "Pregunta de arte 1",
+  [
+    "Respuesta 1",
+    "Respuesta 2",
+    "Respuesta 3",
+    "Respuesta 4"
+  ],
+  0,
+  "arte"
+)
+preguntas.push(pa10)
 
 export {preguntas,Pregunta}
