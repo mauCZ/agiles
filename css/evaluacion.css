@@ -34,6 +34,17 @@ main{
   text-align: center;
 }
 
+.reiniciar{
+  font-family: 'The Girl Next Door', cursive;
+  font-size: 30px;
+  width: 300px;
+  text-align: center;
+}
+
+.reiniciar:hover{
+  background-color: rgb(125, 218, 125);
+}
+
 
 
 

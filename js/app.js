@@ -103,33 +103,3 @@ function markCorrectAnswer() {
     }
   });
 }
-
-// function showRandomQuestion() {
-//   answered = false
-//   answersDefaultStyle();
-//   let randInd = numeroAleatorio(0, 11);
-//   preguntaActual = preguntasSeleccionadas[randInd];
-//   showQuestion(randInd);
-// }
-
-// function showQuestion(ind) {
-//   let category = $(".category");
-//   let selectedQuest = preguntas[ind];
-//   let questionElem = $(".question");
-//   let answersElems = $(".answer");
-//   let selectedCategory = localStorage.getItem("category");
-//   category.text(
-//     selectedCategory.charAt(0).toUpperCase() + selectedCategory.slice(1)
-//   );
-//   questionElem.text(selectedQuest.pregunta);
-//   let answers = selectedQuest.respuestas;
-//   let i = 0;
-//   answersElems.each(function () {
-//     $(this).text(answers[i]);
-//     $(this).append("<i class='fa-solid fa-normal fa-2x'></i>");
-//     i += 1;
-//   });
-// }
-// function numeroAleatorio(min, max) {
-//   return Math.floor(Math.random() * (max - min)) + min;
-// }
