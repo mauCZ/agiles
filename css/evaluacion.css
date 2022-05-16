@@ -34,7 +34,7 @@ main{
   text-align: center;
 }
 
-.reiniciar{
+.reiniciar,.ver_respuestas{
   font-family: 'The Girl Next Door', cursive;
   font-size: 30px;
   width: 300px;
@@ -42,6 +42,10 @@ main{
 }
 
 .reiniciar:hover{
+  background-color: rgb(125, 218, 125);
+}
+
+.ver_respuestas:hover{
   background-color: rgb(125, 218, 125);
 }
 
