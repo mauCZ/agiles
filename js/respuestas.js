@@ -19,7 +19,7 @@ $(function () {
     let icon = $(this).find("i");
     let j = 1;
     for (let [key, value] of preguntasRespondidas) {
-        $(answersElems[i]).text(j + ". " + key.pregunta + "<br>nR. " + key.obtenerRespuestaCorrecta());
+        $(answersElems[i]).text(j + ". " + key.pregunta + " \n R. " + key.obtenerRespuestaCorrecta());
         if (value == 'correcto') {
             $(answersElems[i]).append("<i class='fa-solid fa-check fa-2x'></i>");
         }
