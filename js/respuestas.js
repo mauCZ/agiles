@@ -1,13 +1,11 @@
 import { preguntas, Pregunta } from "./preguntas.js";
 
-
-
 let preguntasSeleccionadas;
 let preguntasRespondidas = new Map();
 $(function () {
     preguntasSeleccionadas = filterQuestions(localStorage.getItem("category"));
-    for(let pregunta of preguntasSeleccionadas){
-        preguntasRespondidas.set(pregunta, 'correcto');
+    for (let pregunta of preguntasSeleccionadas) {
+            preguntasRespondidas.set(pregunta, 'correcto');
     }
     let category = $(".category");
     let answersElems = $(".answer");
@@ -22,13 +20,14 @@ $(function () {
         $(answersElems[i]).text(j + ". " + key.pregunta + " \n R. " + key.obtenerRespuestaCorrecta());
         if (value == 'correcto') {
             $(answersElems[i]).append("<i class='fa-solid fa-check fa-2x'></i>");
+            //$(answersElems[i]).append("<i class='fa-solid fa-text-width fa-2x'></i>");
         }
         else {
             if (value == 'incorrecto') {
                 $(answersElems[i]).append("<i class='fa-solid fa-xmark fa-2x'></i>");
             }
             else {
-                $(answersElems[i]).append("<i class='fa-solid fa-times-circle fa-2x'></i>");
+                $(answersElems[i]).append("<i class='fa-solid fa-text-width fa-2x'></i>");
             }
         }
         j += 1;
