@@ -26,5 +26,4 @@ $(function(){
     // mensajeElem.css("color","darkred")
     mensajeElem.text('¡BUEN TRABAJO!')
   }
-
 })
