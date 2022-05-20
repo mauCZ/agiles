@@ -5,6 +5,9 @@ class Pregunta {
     this.ind = indCorrecto;
     this.categoria = categoria;
   }
+  obtenerPregunta(){
+    return this.pregunta;
+  }
   obtenerCategoria(){
     return this.categoria;
   }
