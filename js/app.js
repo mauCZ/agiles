@@ -1,23 +1,28 @@
 import { preguntas, Pregunta } from "./preguntas.js";
 
 let preguntaActual,
-  answered = false;
-let preguntasRespondidas = 0,
+  answered = false,
+  seconds = 10,
+  preguntasRespondidas = 0,
+  preguntasRespondidasCorrectamente = [],
+  preguntasRespondidasIncorrectamente = [],
+  preguntasNoRespondidasATiempo = [],
+  timer,
+  
   incorrectas = 0,
-  correctas = 0;
-
-let preguntasSeleccionadas,
+  correctas = 0,
+  preguntasSeleccionadas,
   k = 0;
+
 $(function () {
   preguntasSeleccionadas = filterQuestions(localStorage.getItem("category"));
-  
+
   // k = numeroAleatorio(0,preguntasSeleccionadas.length)
   updateQuestionNumber(k);
   preguntaActual = preguntasSeleccionadas[k];
-  window.preguntasSeleccionadas = preguntasSeleccionadas;
-  showNextQuestion();
+  // showNextQuestion();
+  update()
   let answer_options = $(".answer");
-
   answer_options.on("click", function (ev) {
     if (!answered) {
       let icon = $(this).find("i");
@@ -26,25 +31,52 @@ $(function () {
         $(this).toggleClass("correct-answer");
         icon.toggleClass("fa-check");
         correctas += 1;
-        setTimeout(update, 2000);
+        clearInterval(timer)
+        timer = null
+        // preguntasRespondidasCorrectamente.push(preguntaActual)
+        setTimeout(update, 1000);
       } else {
         $(this).toggleClass("incorrect-answer");
         icon.toggleClass("fa-xmark");
         incorrectas += 1;
         markCorrectAnswer();
-        setTimeout(update, 2000);
+
+        clearInterval(timer)
+        timer = null
+        setTimeout(update, 1000);
       }
       answered = true;
     }
   });
 });
 
+function decrementSeconds(){
+  let counterElem = $('.counter')
+  counterElem.text(seconds)
+  seconds -= 1
+}
+function resetSeconds(){
+  seconds = 10
+  let counterElem = $('.counter')
+  counterElem.text(seconds)
+}
+
 function update() {
+
+  timer = setInterval(()=>{
+    if(seconds == 0){
+      incorrectas += 1
+      clearInterval(timer)
+      timer = null
+      update()
+      resetSeconds()
+    }
+    decrementSeconds()
+  },1000);
+
   answered = false;
   answersDefaultStyle();
   // k = numeroAleatorio(0,preguntasSeleccionadas.length)
-  k += 1;
-
   if (k == 10 ) {
     localStorage.setItem("correctos", correctas);
     localStorage.setItem("incorrectos", incorrectas);
@@ -55,6 +87,7 @@ function update() {
     updateQuestionNumber(k);
     showNextQuestion();
   }
+  k += 1
 }
 function updateQuestionNumber(num) {
   let numbElem = $("#numero");
@@ -69,10 +102,12 @@ function answersDefaultStyle() {
 }
 
 function showNextQuestion() {
+  resetSeconds()
   let category = $(".category");
   let questionElem = $(".question");
   let answersElems = $(".answer");
   let selectedCategory = localStorage.getItem("category");
+  let counter = $(".counter")
   category.text(
     selectedCategory.charAt(0).toUpperCase() + selectedCategory.slice(1)
   );
