@@ -49,9 +49,33 @@ main{
   background-color: rgb(125, 218, 125);
 }
 
+.btn-atras:hover{
+  background-color: rgb(125, 218, 125);
+}
 
+.btn-atras {
+  font-family: 'The Girl Next Door', cursive;
+  font-size: 30px;
+  width: 300px;
+  text-align: center;
+}
 
+.fa-check{
+  color: green;
+}
+.fa-xmark{
+  color: red;
+}
+.fa-hourglass-end{
+  color: gray;
+}
 
+#evaluacion{
+  display: none;
+}
+#respuestas{
+  display: block;
+}
 
 
 
