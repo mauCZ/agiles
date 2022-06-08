@@ -8,6 +8,7 @@ $(function () {
     preguntasRespondidas.set(pregunta, 'correctos');
   }
   let category = $(".category");
+  let questionsElems = $(".question");
   let answersElems = $(".answer");
   let selectedCategory = localStorage.getItem("category");
   category.text(
@@ -17,18 +18,17 @@ $(function () {
   let icon = $(this).find("i");
   let j = 1;
   for (let [key, value] of preguntasRespondidas) {
-    $(answersElems[i]).text(j + ". " + key.pregunta + " \n R. " + key.obtenerRespuestaCorrecta());
-    console.log(value);
+    $(questionsElems[i]).text(j + ". " + key.pregunta);
+    $(answersElems[i]).text("R. " + key.obtenerRespuestaCorrecta());
     if (value == 'correcto') {
       $(answersElems[i]).append("<i class='fa-solid fa-check fa-2x'></i>");
-      //$(answersElems[i]).append("<i class='fa-solid fa-text-width fa-2x'></i>");
     }
     else {
       if (value == 'incorrecto') {
         $(answersElems[i]).append("<i class='fa-solid fa-xmark fa-2x'></i>");
       }
       else {
-        $(answersElems[i]).append("<i class='fa-solid fa-hourglass-end fa-2x'></i>");
+        $(answersElems[i]).append("<i class='fa-solid fa-te fa-2x'>TE</i>");
       }
     }
     j += 1;
