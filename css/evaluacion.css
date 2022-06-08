@@ -87,11 +87,11 @@ main {
 }
 
 #evaluacion {
-  display: none;
+  display: block;
 }
 
 #respuestas {
-  display: block;
+  display: none;
 }
 
 .category {

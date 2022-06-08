@@ -76,17 +76,3 @@ function filterQuestions(category) {
   });
   return preguntasSeleccionadas;
 }
-
-function respuestas() {
-  var ocultar = document.getElementById("respuestas");
-  ocultar.style.display = 'none';
-  var mostrar = document.getElementById("evaluacion");
-  mostrar.style.display = 'block';
-}
-
-function evaluacion() {
-  var ocultar = document.getElementById("respuestas");
-  ocultar.style.display = 'block';
-  var mostrar = document.getElementById("evaluacion");
-  mostrar.style.display = 'none';
-}
