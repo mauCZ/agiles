@@ -5,7 +5,7 @@ let preguntasRespondidas = new Map();
 $(function () {
   preguntasSeleccionadas = filterQuestions(localStorage.getItem("category"));
   for (let pregunta of preguntasSeleccionadas) {
-    preguntasRespondidas.set(pregunta, 'correctos');
+    preguntasRespondidas.set(pregunta, 'correcto');
   }
   let category = $(".category");
   let questionsElems = $(".question");
@@ -75,18 +75,18 @@ function filterQuestions(category) {
     return false;
   });
   return preguntasSeleccionadas;
-};
+}
 
 function respuestas() {
   var ocultar = document.getElementById("respuestas");
   ocultar.style.display = 'none';
   var mostrar = document.getElementById("evaluacion");
   mostrar.style.display = 'block';
-};
+}
 
 function evaluacion() {
   var ocultar = document.getElementById("respuestas");
   ocultar.style.display = 'block';
   var mostrar = document.getElementById("evaluacion");
   mostrar.style.display = 'none';
-};
+}

@@ -69,6 +69,11 @@ main {
   text-align: center;
 }
 
+.btn-atras-div{
+  display: flex;
+  justify-content: center;
+}
+
 .fa-check {
   color: green;
 }
@@ -89,18 +94,10 @@ main {
   display: block;
 }
 
-.question {
-  display: flex;
+.category {
+  margin-bottom: 10px;
 }
-
 .answer {
   display: flex;
-}
-
-.category {
-  margin-bottom: 20px;
-}
-
-.flex-container {
   justify-content: space-between;
 }
