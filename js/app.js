@@ -32,7 +32,7 @@ $(function () {
         $(this).toggleClass("correct-answer");
         icon.toggleClass("fa-check");
         correctas += 1;
-        preguntasG = preguntasG + ";correcto:" + preguntaActual.obtenerPregunta()+":"+preguntaActual.obtenerRespuestaCorrecta();
+        preguntasG = preguntasG + ";correcto/" + preguntaActual.obtenerPregunta()+"/"+preguntaActual.obtenerRespuestaCorrecta();
         clearInterval(timer)
         timer = null
         setTimeout(update, 1000);
@@ -40,7 +40,7 @@ $(function () {
         $(this).toggleClass("incorrect-answer");
         icon.toggleClass("fa-xmark");
         incorrectas += 1;
-        preguntasG = preguntasG + ";incorrecto:" + preguntaActual.obtenerPregunta()+":"+preguntaActual.obtenerRespuestaCorrecta();
+        preguntasG = preguntasG + ";incorrecto/" + preguntaActual.obtenerPregunta()+"/"+preguntaActual.obtenerRespuestaCorrecta();
         markCorrectAnswer();
         clearInterval(timer)
         timer = null
@@ -67,6 +67,7 @@ function update() {
   timer = setInterval(() => {
     if (seconds == 0) {
       incorrectas += 1
+      preguntasG = preguntasG + ";TE/" + preguntaActual.obtenerPregunta()+"/"+preguntaActual.obtenerRespuestaCorrecta();
       clearInterval(timer)
       timer = null
       update()

@@ -1,13 +1,10 @@
 import { preguntas, Pregunta } from "./preguntas.js";
 
 let preguntasSeleccionadas;
-let preguntasRespondidas = new Map();
 let preg = [];
 let question = [];
 $(function () {
-
   preg = localStorage.getItem("preguntas").split(";");
-  console.log(preg);
   let category = $(".category");
   let questionsElems = $(".question");
   let answersElems = $(".answer");
@@ -18,8 +15,7 @@ $(function () {
   let indice_elem_html = 0;
   let nro_pregunta = 1;
   for (let k = 1;k<preg.length;k++) {
-    question = preg[k].split(":");
-    console.log(question);
+    question = preg[k].split("/");
     $(questionsElems[indice_elem_html]).text(nro_pregunta + ". " + question[1]);
     $(answersElems[indice_elem_html]).text("R. " + question[2]);
     if (question[0] == 'correcto') {
