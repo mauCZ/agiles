@@ -15,6 +15,11 @@ let preguntaActual,
   k = 0;
 
 $(function () {
+  if(localStorage.getItem('dificult')==null){
+    localStorage.setItem('dificult','Facil')
+  //  alert('dificultad por defeto')
+  }
+
   preguntasSeleccionadas = filterQuestions(localStorage.getItem("category"));
 
   // k = numeroAleatorio(0,preguntasSeleccionadas.length)

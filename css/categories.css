@@ -37,7 +37,8 @@ button a{
   display: grid;
   grid-template-areas: "arte      ciencias"
                        "deporte  historia "
-                       "variado   variado";
+                       "variado   variado"
+                       "none      dificult";
   justify-content: center;
   grid-row-gap: 10px;
   grid-column-gap: 22px;
@@ -56,6 +57,13 @@ a i{
 }
 #cat-ciencias{
   grid-area: ciencias;
+}
+
+.dificult{
+  grid-area: dificult; 
+  width: 200px;
+  font-size: large;
+  font-family: 'Handlee', cursive;
 }
 #cat-variado{
   grid-area: variado;
