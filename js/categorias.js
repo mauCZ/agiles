@@ -21,13 +21,13 @@ $(function () {
   });
 
   dificult.on("click",function(){
-    let idDificult = $(this).val()
-    console.log(idDificult)
-    if(typeof idDificult){
-    if(idDificult=='Facil'){
-      localStorage.setItem('dificult','Facil')
+    let idDifficult = $(this).val()
+    console.log(idDifficult)
+    if(typeof idDifficult){
+    if(idDifficult=='Facil'){
+      localStorage.setItem('difficult','Facil')
     }else{
-      localStorage.setItem('dificult','Dificil')
+      localStorage.setItem('difficult','Dificil')
     }
   }
   });

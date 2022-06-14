@@ -15,8 +15,8 @@ let preguntaActual,
   k = 0;
 
 $(function () {
-  if(localStorage.getItem('dificult')==null){
-    localStorage.setItem('dificult','Facil')
+  if(localStorage.getItem('difficult')==null){
+    localStorage.setItem('difficult','Facil')
   //  alert('dificultad por defeto')
   }
 
