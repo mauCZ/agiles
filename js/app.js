@@ -8,9 +8,10 @@ let preguntaActual,
   preguntasRespondidasIncorrectamente = [],
   preguntasNoRespondidasATiempo = [],
   timer,
-  
+
   incorrectas = 0,
   correctas = 0,
+  preguntasG = "",
   preguntasSeleccionadas,
   k = 0;
 
@@ -31,16 +32,16 @@ $(function () {
         $(this).toggleClass("correct-answer");
         icon.toggleClass("fa-check");
         correctas += 1;
+        preguntasG = preguntasG + ";correcto/" + preguntaActual.obtenerPregunta()+"/"+preguntaActual.obtenerRespuestaCorrecta();
         clearInterval(timer)
         timer = null
-        // preguntasRespondidasCorrectamente.push(preguntaActual)
         setTimeout(update, 1000);
       } else {
         $(this).toggleClass("incorrect-answer");
         icon.toggleClass("fa-xmark");
         incorrectas += 1;
+        preguntasG = preguntasG + ";incorrecto/" + preguntaActual.obtenerPregunta()+"/"+preguntaActual.obtenerRespuestaCorrecta();
         markCorrectAnswer();
-
         clearInterval(timer)
         timer = null
         setTimeout(update, 1000);
@@ -50,12 +51,12 @@ $(function () {
   });
 });
 
-function decrementSeconds(){
+function decrementSeconds() {
   let counterElem = $('.counter')
   counterElem.text(seconds)
   seconds -= 1
 }
-function resetSeconds(){
+function resetSeconds() {
   seconds = 10
   let counterElem = $('.counter')
   counterElem.text(seconds)
@@ -63,23 +64,27 @@ function resetSeconds(){
 
 function update() {
 
-  timer = setInterval(()=>{
-    if(seconds == 0){
+  timer = setInterval(() => {
+    if (seconds == 0) {
       incorrectas += 1
+      preguntasG = preguntasG + ";TE/" + preguntaActual.obtenerPregunta()+"/"+preguntaActual.obtenerRespuestaCorrecta();
       clearInterval(timer)
       timer = null
       update()
       resetSeconds()
     }
     decrementSeconds()
-  },1000);
+  }, 1000);
 
   answered = false;
   answersDefaultStyle();
   // k = numeroAleatorio(0,preguntasSeleccionadas.length)
-  if (k == 10 ) {
+  if (k == 10) {
     localStorage.setItem("correctos", correctas);
     localStorage.setItem("incorrectos", incorrectas);
+
+    localStorage.setItem("preguntas", preguntasG);
+
     window.location.replace("../html/evaluacion.html");
     answered = true;
   } else {

@@ -1,60 +1,109 @@
 *,
 ::after,
-::before{
+::before {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
-body{
+
+body {
   min-height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
 }
-main{
+
+main {
   font-family: 'The Girl Next Door', cursive;
 }
-#resultados{
+
+#resultados {
   margin-top: -20px;
 
 }
-#correctas,#incorrectas{
+
+#correctas,
+#incorrectas {
   font-family: Arial, Helvetica, sans-serif;
   font-size: 30px;
 }
-#correctas{
+
+#correctas {
   color: darkgreen
 }
-#incorrectas{
+
+#incorrectas {
   color: darkred
 }
-#mensaje{
+
+#mensaje {
   margin-top: 35px;
   font-size: 40px;
   text-align: center;
 }
 
-.reiniciar{
+.reiniciar,
+.ver_respuestas {
   font-family: 'The Girl Next Door', cursive;
   font-size: 30px;
   width: 300px;
   text-align: center;
 }
 
-.reiniciar:hover{
+.reiniciar:hover {
   background-color: rgb(125, 218, 125);
 }
 
+.ver_respuestas:hover {
+  background-color: rgb(125, 218, 125);
+}
+
+.btn-atras:hover {
+  background-color: rgb(125, 218, 125);
+}
+
+.btn-atras {
+  font-family: 'The Girl Next Door', cursive;
+  font-size: 30px;
+  width: 300px;
+  text-align: center;
+}
+
+.btn-atras-div{
+  display: flex;
+  justify-content: center;
+}
+
+.fa-check {
+  color: green;
+  margin-top: -25px;
+}
+
+.fa-xmark {
+  color: red;
+  margin-top: -25px;
+}
+
+.fa-te {
+  color: gray;
+  margin-top: -25px;
+}
 
 
+#evaluacion {
+  display: block;
+}
 
+#respuestas {
+  display: none;
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
 
-
-
-
-
-
-
-
-
-
+.category {
+  margin-bottom: 10px;
+}
+.answer {
+  display: flex;
+  justify-content: space-between;
+}
