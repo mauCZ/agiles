@@ -59,6 +59,13 @@ a i{
 #cat-ciencias{
   grid-area: ciencias;
 }
+
+.dificult{
+  grid-area: dificult; 
+  width: 200px;
+  font-size: large;
+  font-family: 'Handlee', cursive;
+}
 #cat-variado{
   grid-area: variado;
   width: auto;

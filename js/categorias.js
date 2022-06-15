@@ -1,5 +1,5 @@
 let btns = $(".cat");
-
+let dificult =$(".dificult")
 
 
 $(function () {
@@ -18,6 +18,18 @@ $(function () {
     }else if(idSelected == 'cat-variado'){
       localStorage.setItem('category', 'variado')
     }
+  });
+
+  dificult.on("click",function(){
+    let idDifficult = $(this).val()
+    console.log(idDifficult)
+    if(typeof idDifficult){
+    if(idDifficult=='Facil'){
+      localStorage.setItem('difficult','Facil')
+    }else{
+      localStorage.setItem('difficult','Dificil')
+    }
+  }
   });
 
 });
