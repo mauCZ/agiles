@@ -38,7 +38,8 @@ button a{
   grid-template-areas: "arte      ciencias"
                        "deporte  historia "
                        "variado   variado"
-                       "none      dificult";
+                       "none       name"
+                       "none     dificult";
   justify-content: center;
   grid-row-gap: 10px;
   grid-column-gap: 22px;
@@ -71,4 +72,17 @@ a i{
 }
 i{
   display: inline-block;
+}
+
+.name{
+  grid-area: name;
+}
+
+.dificult{
+  grid-area: dificult;
+  cursor: pointer;
+}
+
+select option{
+  cursor: pointer;
 }

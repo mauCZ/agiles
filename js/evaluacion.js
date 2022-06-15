@@ -1,12 +1,10 @@
 import { preguntas, Pregunta } from "./preguntas.js";
 
 let preguntasSeleccionadas;
-let preguntasRespondidas = new Map();
+let preg = [];
+let question = [];
 $(function () {
-  preguntasSeleccionadas = filterQuestions(localStorage.getItem("category"));
-  for (let pregunta of preguntasSeleccionadas) {
-    preguntasRespondidas.set(pregunta, 'correcto');
-  }
+  preg = localStorage.getItem("preguntas").split(";");
   let category = $(".category");
   let questionsElems = $(".question");
   let answersElems = $(".answer");
@@ -14,29 +12,26 @@ $(function () {
   category.text(
     "Respuestas de la ronda categoria " + selectedCategory.charAt(0).toUpperCase() + selectedCategory.slice(1)
   );
-  let i = 0;
-  let icon = $(this).find("i");
-  let j = 1;
-  for (let [key, value] of preguntasRespondidas) {
-    $(questionsElems[i]).text(j + ". " + key.pregunta);
-    $(answersElems[i]).text("R. " + key.obtenerRespuestaCorrecta());
-    if (value == 'correcto') {
-      $(answersElems[i]).append("<i class='fa-solid fa-check fa-2x'></i>");
+  let indice_elem_html = 0;
+  let nro_pregunta = 1;
+  for (let k = 1;k<preg.length;k++) {
+    question = preg[k].split("/");
+    $(questionsElems[indice_elem_html]).text(nro_pregunta + ". " + question[1]);
+    $(answersElems[indice_elem_html]).text("R. " + question[2]);
+    if (question[0] == 'correcto') {
+      $(answersElems[indice_elem_html]).append("<i class='fa-solid fa-check fa-2x'></i>");
     }
     else {
-      if (value == 'incorrecto') {
-        $(answersElems[i]).append("<i class='fa-solid fa-xmark fa-2x'></i>");
+      if (question[0] == 'incorrecto') {
+        $(answersElems[indice_elem_html]).append("<i class='fa-solid fa-xmark fa-2x'></i>");
       }
       else {
-        $(answersElems[i]).append("<i class='fa-solid fa-te fa-2x'>TE</i>");
+        $(answersElems[indice_elem_html]).append("<i class='fa-solid fa-te fa-2x'>TE</i>");
       }
     }
-    j += 1;
-    i += 1;
+    nro_pregunta += 1;
+    indice_elem_html += 1;
   }
-  answersElems.each(function () {
-
-  });
 });
 
 
