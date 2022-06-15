@@ -8,20 +8,25 @@ let preguntaActual,
   preguntasRespondidasIncorrectamente = [],
   preguntasNoRespondidasATiempo = [],
   timer,
-
   incorrectas = 0,
   correctas = 0,
   preguntasG = "",
   preguntasSeleccionadas,
+  preguntasPorRonda = 10,
   k = 0;
 
 $(function () {
-  if(localStorage.getItem('difficult')==null){
-    localStorage.setItem('difficult','Facil')
-  //  alert('dificultad por defeto')
+  if(localStorage.getItem('difficult') == null){
+    localStorage.setItem('difficult','Facil');
+  }
+  if(localStorage.getItem('questionsNumber') == null){
+    console.log("gaa")
+    localStorage.setItem('questionsNumber',10);
   }
 
-  preguntasSeleccionadas = filterQuestions(localStorage.getItem("category"));
+  preguntasSeleccionadas = filterQuestions(localStorage.getItem("category"),localStorage.getItem('difficult'));
+
+  preguntasPorRonda = Math.min(localStorage.getItem('questionsNumber'),preguntasSeleccionadas.length);
 
   // k = numeroAleatorio(0,preguntasSeleccionadas.length)
   updateQuestionNumber(k);
@@ -84,7 +89,7 @@ function update() {
   answered = false;
   answersDefaultStyle();
   // k = numeroAleatorio(0,preguntasSeleccionadas.length)
-  if (k == 10) {
+  if (k == preguntasPorRonda) {
     localStorage.setItem("correctos", correctas);
     localStorage.setItem("incorrectos", incorrectas);
 
@@ -118,6 +123,8 @@ function showNextQuestion() {
   let answersElems = $(".answer");
   let selectedCategory = localStorage.getItem("category");
   let counter = $(".counter")
+  let preguntasPorRonda = $('#preguntasPorRonda')
+  preguntasPorRonda.text(Math.min(localStorage.getItem("questionsNumber"),preguntasSeleccionadas.length))
   category.text(
     selectedCategory.charAt(0).toUpperCase() + selectedCategory.slice(1)
   );
@@ -131,12 +138,25 @@ function showNextQuestion() {
   });
 }
 
-function filterQuestions(category) {
+function filterQuestions(category,difficult) {
   preguntasSeleccionadas = preguntas.filter(function (pregunta) {
-    if (pregunta.obtenerCategoria() == category) return true;
+    if (pregunta.obtenerCategoria() == category && pregunta.obtenerDificultad()==difficult.toLowerCase()) return true;
     return false;
   });
-  return preguntasSeleccionadas;
+  return mezclar(preguntasSeleccionadas);
+}
+function mezclar(array) {
+  let currentIndex = array.length,  randomIndex;
+  // While there remain elements to shuffle.
+  while (currentIndex != 0) {
+    // Pick a remaining element.
+    randomIndex = Math.floor(Math.random() * currentIndex);
+    currentIndex--;
+    // And swap it with the current element.
+    [array[currentIndex], array[randomIndex]] = [
+      array[randomIndex], array[currentIndex]];
+  }
+  return array;
 }
 function markCorrectAnswer() {
   let respuestaActual = preguntaActual["respuestas"][preguntaActual.ind];

@@ -1,9 +1,10 @@
 class Pregunta {
-  constructor(pregunta, respuestas, indCorrecto,categoria) {
+  constructor(pregunta, respuestas, indCorrecto,categoria,dificultad) {
     this.pregunta = pregunta;
     this.respuestas = respuestas;
     this.ind = indCorrecto;
     this.categoria = categoria;
+    this.dificultad = dificultad;
   }
   obtenerPregunta(){
     return this.pregunta;
@@ -16,6 +17,9 @@ class Pregunta {
   }
   obtenerRespuestaCorrecta(){
     return this.respuestas[this.ind]
+  }
+  obtenerDificultad(){
+    return this.dificultad;
   }
 }
 
@@ -30,7 +34,8 @@ let pregunta0 = new Pregunta(
     "Es la ciencia que estudia los oceanos.",
   ],
   0,
-  "variado"
+  "variado",
+  "dificil"
 );
 preguntas.push(pregunta0)
 
@@ -43,7 +48,8 @@ let pregunta1 = new Pregunta(
     "Jose Ballivian",
   ],
   1,
-  "historia"
+  "historia",
+  "facil"
 );
 preguntas.push(pregunta1)
 
@@ -56,7 +62,8 @@ let pregunta2 = new Pregunta(
     "1939 - 1945"
   ],
   3,
-  "variado"
+  "variado",
+  "dificil"
 )
 preguntas.push(pregunta2)
 
@@ -69,7 +76,8 @@ let pregunta3 = new Pregunta(
     "Rio Yangtze"
   ],
   2,
-  "ciencias"
+  "ciencias",
+  "facil"
 )
 preguntas.push(pregunta3)
 
@@ -82,7 +90,8 @@ let pregunta4 = new Pregunta(
     "207"
   ],
   1,
-  "variado"
+  "variado",
+  "facil"
 )
 preguntas.push(pregunta4)
 
@@ -95,7 +104,8 @@ let pregunta5 = new Pregunta(
     "2"
   ],
   2,
-  "variado"
+  "variado",
+  "dificil"
 )
 preguntas.push(pregunta5)
 
@@ -108,7 +118,8 @@ let pregunta6 = new Pregunta(
     "Santa Cruz de la Sierra"
   ],
   1,
-  "historia"
+  "historia",
+  "facil"
 )
 preguntas.push(pregunta6)
 
@@ -121,7 +132,8 @@ let pregunta7 = new Pregunta(
     "Tierra"
   ],
   1,
-  "variado"
+  "variado",
+  "facil"
 )
 preguntas.push(pregunta7)
 
@@ -134,7 +146,8 @@ let pregunta8 = new Pregunta(
     "Mastozoologia"
   ],
   1,
-  "ciencias"
+  "ciencias",
+  "dificil"
 )
 preguntas.push(pregunta8)
 
@@ -147,7 +160,8 @@ let pregunta9 = new Pregunta(
     "Kanguro"
   ],
   2,
-  "ciencias"
+  "ciencias",
+  "dificil"
 )
 preguntas.push(pregunta9)
 
@@ -160,7 +174,8 @@ let pregunta10 = new Pregunta(
     "1971"
   ],
   1,
-  "ciencias"
+  "ciencias",
+  "dificil"
 )
 preguntas.push(pregunta10)
 
@@ -173,7 +188,8 @@ let pregunta11 = new Pregunta(
     "Simón José Antonio de la Santísima Trinidad Bolívar Palacios Ponte y Blanco"
   ],
   3,
-  "historia"
+  "historia",
+  "dificil"
 )
 preguntas.push(pregunta11)
 
@@ -186,7 +202,8 @@ let pregunta12 = new Pregunta(
     "1790"
   ],
   0,
-  "historia"
+  "historia",
+  "dificil"
 )
 preguntas.push(pregunta12)
 
@@ -199,7 +216,8 @@ let pregunta13 = new Pregunta(
     "Tupac Katari"
   ],
   0,
-  "historia"
+  "historia",
+  "dificil"
 )
 preguntas.push(pregunta13)
 
@@ -212,7 +230,8 @@ let pregunta14 = new Pregunta(
     "1932-1935"
   ],
   3,
-  "historia"
+  "historia",
+  "dificil"
 )
 preguntas.push(pregunta14)
 
@@ -225,7 +244,8 @@ let pregunta15 = new Pregunta(
     "General Barrientos"
   ],
   2,
-  "historia"
+  "historia",
+  "dificil"
 )
 preguntas.push(pregunta15)
 
@@ -238,7 +258,8 @@ let pregunta16 = new Pregunta(
     "1826"
   ],
   2,
-  "historia"
+  "historia",
+  "facil"
 )
 preguntas.push(pregunta16)
 
@@ -251,12 +272,13 @@ let pregunta17 = new Pregunta(
     "Victor Paz Estensoro"
   ],
   0,
-  "historia"
+  "historia",
+  "dificil"
 )
 preguntas.push(pregunta17)
 
 let pregunta18 = new Pregunta(
-  "Cuantas lenguas tiene Bolivia?",
+  "Cuantas lenguas se habla en Bolivia?",
   [
     "Menos de 10",
     "Cerca de 40",
@@ -264,7 +286,8 @@ let pregunta18 = new Pregunta(
     "Solamente 4, castellano y 3 originarios"
   ],
   1,
-  "historia"
+  "historia",
+  "dificil"
 )
 preguntas.push(pregunta18)
 
@@ -277,7 +300,8 @@ let pregunta19 = new Pregunta(
     "Estado Indigenista de Bolivia"
   ],
   0,
-  "historia"
+  "historia",
+  "facil"
 )
 preguntas.push(pregunta19)
 
@@ -290,7 +314,8 @@ let pregunta20 = new Pregunta(
     "Adriana Salvatierra"
   ],
   3,
-  "historia"
+  "historia",
+  "facil"
 )
 preguntas.push(pregunta20)
 
@@ -303,7 +328,8 @@ let pregunta21 = new Pregunta(
     "339 municipios"
   ],
   3,
-  "historia"
+  "historia",
+  "dificil"
 )
 preguntas.push(pregunta21)
 
@@ -316,7 +342,8 @@ let pregunta22 = new Pregunta(
     "Ninguno de las anteriores"
   ],
   1,
-  "historia"
+  "historia",
+  "dificil"
 )
 preguntas.push(pregunta22)
 
@@ -329,7 +356,8 @@ let pregunta23 = new Pregunta(
     "Areas de desarrollo"
   ],
   0,
-  "historia"
+  "historia",
+  "facil"
 )
 preguntas.push(pregunta23)
 
@@ -342,7 +370,8 @@ let pregunta24 = new Pregunta(
     "La cancilleria"
   ],
   2,
-  "historia"
+  "historia",
+  "facil"
 )
 preguntas.push(pregunta24)
 
@@ -355,7 +384,8 @@ let pregunta25 = new Pregunta(
     "Paraguay, Argentina, Chile, Perú, Brasil y Venezuela"
   ],
   0,
-  "historia"
+  "historia",
+  "facil"
 )
 preguntas.push(pregunta25)
 
@@ -368,7 +398,8 @@ let pregunta26 = new Pregunta(
     "Simón Bolivar"
   ],
   1,
-  "historia"
+  "historia",
+  "dificil"
 )
 preguntas.push(pregunta26)
 
@@ -381,7 +412,8 @@ let pregunta27 = new Pregunta(
     "4"
   ],
   1,
-  "historia"
+  "historia",
+  "dificil"
 )
 preguntas.push(pregunta27)
 
@@ -394,7 +426,8 @@ let pregunta28 = new Pregunta(
     "Tunari"
   ],
   1,
-  "historia"
+  "historia",
+  "facil"
 )
 preguntas.push(pregunta28)
 
@@ -407,7 +440,8 @@ let pregunta29 = new Pregunta(
     "Con cuatro: La Paz, Potosí, Cochabamba y Chuquisaca"
   ],
   2,
-  "historia"
+  "historia",
+  "dificil"
 )
 preguntas.push(pregunta29)
 
@@ -420,12 +454,10 @@ let pregunta30 = new Pregunta(
     "1098560 km² - 2769363 km²"
   ],
   2,
-  "historia"
+  "historia",
+  "dificil"
 )
 preguntas.push(pregunta30)
-
-
-
 
 
 let p31 = new Pregunta(
@@ -437,7 +469,8 @@ let p31 = new Pregunta(
     "Célula"
   ],
   3,
-  "ciencias"
+  "ciencias",
+  "facil"
 )
 preguntas.push(p31);
 
@@ -450,7 +483,8 @@ let p32 = new Pregunta(
     "Meiosis"
   ],
   1,
-  "ciencias"
+  "ciencias",
+  "dificil"
 )
 preguntas.push(p32)
 
@@ -463,12 +497,13 @@ let p33 = new Pregunta(
     "En el citoplasma"
   ],
   0,
-  "ciencias"
+  "ciencias",
+  "dificil"
 )
 preguntas.push(p33)
 
 let p34 = new Pregunta(
-  "¿Con qué respira una ballena?",
+  "¿Con qué organo respira una ballena?",
   [
     "Por la piel",
     "Pulmones",
@@ -476,7 +511,8 @@ let p34 = new Pregunta(
     "Nariz"
   ],
   1,
-  "ciencias"
+  "ciencias",
+  "facil"
 )
 preguntas.push(p34)
 
@@ -489,7 +525,8 @@ let p35 = new Pregunta(
     "Acidos"
   ],
   0,
-  "ciencias"
+  "ciencias",
+  "dificil"
 )
 preguntas.push(p35)
 
@@ -502,7 +539,8 @@ let p36 = new Pregunta(
     "Mulo"
   ],
   3,
-  "ciencias"
+  "ciencias",
+  "dificil"
 )
 preguntas.push(p36)
 
@@ -515,7 +553,8 @@ let p37 = new Pregunta(
     "Fruta"
   ],
   3,
-  "ciencias"
+  "ciencias",
+  "facil"
 )
 preguntas.push(p37)
 
@@ -528,7 +567,8 @@ let p38 = new Pregunta(
     "Energia"
   ],
   0,
-  "ciencias"
+  "ciencias",
+  "facil"
 )
 preguntas.push(p38)
 
@@ -541,7 +581,8 @@ let p39 = new Pregunta(
     "Gradualismo"
   ],
   1,
-  "ciencias"
+  "ciencias",
+  "dificil"
 )
 preguntas.push(p39)
 
@@ -554,7 +595,8 @@ let p40 = new Pregunta(
     "Metastasis"
   ],
   0,
-  "ciencias"
+  "ciencias",
+  "dificil"
 )
 preguntas.push(p40)
 
@@ -567,7 +609,8 @@ let p41 = new Pregunta(
     "Animales"
   ],
   0,
-  "ciencias"
+  "ciencias",
+  "dificil"
 )
 preguntas.push(p41)
 
@@ -580,7 +623,8 @@ let p42 = new Pregunta(
     "Carecen de procesos metabólicos"
   ],
   2,
-  "ciencias"
+  "ciencias",
+  "dificil"
 )
 preguntas.push(p42)
 
@@ -593,7 +637,8 @@ let p43 = new Pregunta(
     "Mórula, blástula y gástrula."
   ],
   1,
-  "ciencias"
+  "ciencias",
+  "dificil"
 )
 preguntas.push(p43)
 
@@ -606,12 +651,13 @@ let p44 = new Pregunta(
     "El sistema nervioso, la piel y sus anexos."
   ],
   3,
-  "ciencias"
+  "ciencias",
+  "dificil"
 )
 preguntas.push(p44)
 
 let p45 = new Pregunta(
-  "El esquema de la figura adjuntarepresenta:",
+  "El esquema de la figura adjunta representa:",
   [
     "La estructura primaria de una proteína",
     "La estructura secundaria de una proteína.",
@@ -619,9 +665,12 @@ let p45 = new Pregunta(
     "La estructura cuaternaria de una proteína."
   ],
   1,
-  "ciencias"
+  "ciencias",
+  "dificil"
 )
 preguntas.push(p45)
+
+
 
 let pd1 = new Pregunta(
   "Como se llama la anotacion de un tanto en futbol americano?",
@@ -632,7 +681,8 @@ let pd1 = new Pregunta(
     "Conversion (TRY)"
   ],
   2,
-  "deporte"
+  "deporte",
+  "facil"
 )
 preguntas.push(pd1)
 
@@ -645,7 +695,8 @@ let pd2 = new Pregunta(
     "Italia"
   ],
   1,
-  "deporte"
+  "deporte",
+  "facil"
 )
 preguntas.push(pd2)
 
@@ -658,7 +709,8 @@ let pd3 = new Pregunta(
     "Michael Schumacher,piloto aleman"
   ],
   3,
-  "deporte"
+  "deporte",
+  "dificil"
 )
 preguntas.push(pd3)
 
@@ -671,7 +723,8 @@ let pd4 = new Pregunta(
     "Squash"
   ],
   0,
-  "deporte"
+  "deporte",
+  "dificil"
 )
 preguntas.push(pd4)
 
@@ -684,7 +737,8 @@ let pd5 = new Pregunta(
     "90 minutos repartidos en dos partes de 45 minutos cada una."
   ],
   0,
-  "deporte"
+  "deporte",
+  "facil"
 )
 preguntas.push(pd5)
 
@@ -697,7 +751,8 @@ let pd6 = new Pregunta(
     "El 12 de octubre de 1926 en Santiago de Chile"
   ],
   2,
-  "deporte"
+  "deporte",
+  "dificil"
 )
 preguntas.push(pd6)
 
@@ -710,7 +765,8 @@ let pd7 = new Pregunta(
     "Alemania"
   ],
   1,
-  "deporte"
+  "deporte",
+  "facil"
 )
 preguntas.push(pd7)
 
@@ -723,7 +779,8 @@ let pd8 = new Pregunta(
     "Nadador"
   ],
   3,
-  "deporte"
+  "deporte",
+  "dificil"
 )
 preguntas.push(pd8)
 
@@ -736,7 +793,8 @@ let pd9 = new Pregunta(
     "Segun el reglamento dura 20 minutos repartidos en dos tiempos de 10 minutos cada uno"
   ],
   0,
-  "deporte"
+  "deporte",
+  "dificil"
 )
 preguntas.push(pd9)
 
@@ -749,7 +807,8 @@ let pd10 = new Pregunta(
     "12"
   ],
   1,
-  "deporte"
+  "deporte",
+  "facil"
 )
 preguntas.push(pd10)
 let pd11 = new Pregunta(
@@ -761,7 +820,8 @@ let pd11 = new Pregunta(
     "Pele"
   ],
   2,
-  "deporte"
+  "deporte",
+  "dificil"
 )
 preguntas.push(pd11)
 let pd12 = new Pregunta(
@@ -773,7 +833,8 @@ let pd12 = new Pregunta(
     "En Juventus"
   ],
   0,
-  "deporte"
+  "deporte",
+  "dificil"
 )
 preguntas.push(pd12)
 
@@ -786,7 +847,8 @@ let pd13 = new Pregunta(
     "LeBron James"
   ],
   2,
-  "deporte"
+  "deporte",
+  "facil"
 )
 preguntas.push(pd13)
 
@@ -799,7 +861,8 @@ let pd14 = new Pregunta(
     "El green"
   ],
   3,
-  "deporte"
+  "deporte",
+  "dificil"
 )
 preguntas.push(pd14)
 
@@ -812,7 +875,8 @@ let pd15 = new Pregunta(
     "Canodromo"
   ],
   0,
-  "deporte"
+  "deporte",
+  "facil"
 )
 preguntas.push(pd15)
 
@@ -826,7 +890,8 @@ let pa1 = new Pregunta(
     "Van Gogh"
   ],
   0,
-  "arte"
+  "arte",
+  "facil"
 )
 preguntas.push(pa1)
 
@@ -839,7 +904,8 @@ let pa2 = new Pregunta(
     "Galeria Uffizi"
   ],
   2,
-  "arte"
+  "arte",
+  "facil"
 )
 preguntas.push(pa2)
 
@@ -852,7 +918,8 @@ let pa3 = new Pregunta(
     "Siglo XVIII"
   ],
   0,
-  "arte"
+  "arte",
+  "dificil"
 )
 preguntas.push(pa3)
 
@@ -865,7 +932,8 @@ let pa4 = new Pregunta(
     "Respuesta 4"
   ],
   0,
-  "arte"
+  "arte",
+  "dificil"
 )
 preguntas.push(pa4)
 let pa5 = new Pregunta(
@@ -877,7 +945,8 @@ let pa5 = new Pregunta(
     "Respuesta 4"
   ],
   0,
-  "arte"
+  "arte",
+  "facil"
 )
 preguntas.push(pa5)
 let pa6 = new Pregunta(
@@ -889,7 +958,8 @@ let pa6 = new Pregunta(
     "Respuesta 4"
   ],
   0,
-  "arte"
+  "arte",
+  "dificil"
 )
 preguntas.push(pa6)
 let pa7 = new Pregunta(
@@ -901,7 +971,8 @@ let pa7 = new Pregunta(
     "Respuesta 4"
   ],
   0,
-  "arte"
+  "arte",
+  "facil"
 )
 preguntas.push(pa7)
 let pa8 = new Pregunta(
@@ -913,7 +984,8 @@ let pa8 = new Pregunta(
     "Respuesta 4"
   ],
   0,
-  "arte"
+  "arte",
+  "dificil"
 )
 preguntas.push(pa8)
 let pa9 = new Pregunta(
@@ -925,7 +997,8 @@ let pa9 = new Pregunta(
     "Respuesta 4"
   ],
   0,
-  "arte"
+  "arte",
+  "facil"
 )
 preguntas.push(pa9)
 let pa10 = new Pregunta(
@@ -937,7 +1010,8 @@ let pa10 = new Pregunta(
     "Respuesta 4"
   ],
   0,
-  "arte"
+  "arte",
+  "facil"
 )
 preguntas.push(pa10)
 

@@ -17,13 +17,13 @@ $(function () {
     }else if(idSelected == 'cat-variado'){
       localStorage.setItem('category', 'variado')
     }
+
     let idDifficult = $(".difficult").val()
+    localStorage.setItem('difficult',idDifficult);
+
+    let questionsNumber =$('.cantidad').val()
+    localStorage.setItem('questionsNumber',questionsNumber);
     
-    if(idDifficult=='Facil'){
-      localStorage.setItem('difficult','Facil')
-    }else{
-      localStorage.setItem('difficult','Dificil')
-    }
   });
 
 });
