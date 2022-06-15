@@ -1,5 +1,4 @@
 let btns = $(".cat");
-let difficult =$(".difficult")
 
 
 $(function () {
@@ -18,10 +17,7 @@ $(function () {
     }else if(idSelected == 'cat-variado'){
       localStorage.setItem('category', 'variado')
     }
-  });
-
-  difficult.on("click",function(){
-    let idDifficult = $(this).val()
+    let idDifficult = $(".difficult").val()
     
     if(idDifficult=='Facil'){
       localStorage.setItem('difficult','Facil')

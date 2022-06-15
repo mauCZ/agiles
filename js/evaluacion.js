@@ -38,16 +38,16 @@ $(function () {
 $(function () {
   let correctasElem = $('#correctas')
   let incorrectasElem = $('#incorrectas')
-  let difcult = $('#dificult')
+  let difficult = $('#difficult')
 
-  let dificultValue = localStorage.getItem('dificult')
+  let difficultValue = localStorage.getItem('difficult')
   let preguntasCorrectas = localStorage.getItem('correctos')
   let preguntasIncorrectas = localStorage.getItem('incorrectos')
   
   correctasElem.text(preguntasCorrectas)
   incorrectasElem.text(preguntasIncorrectas)
-  console.log(dificultValue)
-  difcult.text(dificultValue)
+  console.log(difficultValue)
+  difficult.text(difficultValue)
 
   let mensajeElem = $('#mensaje')
   if (preguntasIncorrectas > preguntasCorrectas) {
