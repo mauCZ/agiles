@@ -39,7 +39,7 @@ button a{
                        "deporte  historia "
                        "variado   variado"
                        "none       name"
-                       "none     dificult";
+                       "none     difficult";
   justify-content: center;
   grid-row-gap: 10px;
   grid-column-gap: 22px;
@@ -60,11 +60,12 @@ a i{
   grid-area: ciencias;
 }
 
-.dificult{
-  grid-area: dificult; 
+.difficult{
+  grid-area: difficult; 
   width: 200px;
   font-size: large;
   font-family: 'Handlee', cursive;
+  cursor: pointer;
 }
 #cat-variado{
   grid-area: variado;
@@ -76,11 +77,6 @@ i{
 
 .name{
   grid-area: name;
-}
-
-.dificult{
-  grid-area: dificult;
-  cursor: pointer;
 }
 
 select option{

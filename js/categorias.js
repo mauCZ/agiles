@@ -1,5 +1,5 @@
 let btns = $(".cat");
-let dificult =$(".dificult")
+let difficult =$(".difficult")
 
 
 $(function () {
@@ -20,16 +20,14 @@ $(function () {
     }
   });
 
-  dificult.on("click",function(){
+  difficult.on("click",function(){
     let idDifficult = $(this).val()
-    console.log(idDifficult)
-    if(typeof idDifficult){
+    
     if(idDifficult=='Facil'){
       localStorage.setItem('difficult','Facil')
     }else{
       localStorage.setItem('difficult','Dificil')
     }
-  }
   });
 
 });
