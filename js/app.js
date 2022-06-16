@@ -140,7 +140,11 @@ function showNextQuestion() {
 
 function filterQuestions(category,difficult) {
   preguntasSeleccionadas = preguntas.filter(function (pregunta) {
-    if (pregunta.obtenerCategoria() == category && pregunta.obtenerDificultad()==difficult.toLowerCase()) return true;
+    if(category=="variado"){
+      if(pregunta.obtenerDificultad()==difficult.toLowerCase())return true;
+      return false;
+    }
+    else if (pregunta.obtenerCategoria() == category && pregunta.obtenerDificultad()==difficult.toLowerCase()) return true;
     return false;
   });
   return mezclar(preguntasSeleccionadas);
