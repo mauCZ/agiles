@@ -847,7 +847,7 @@ preguntas.push(pa18);
 let pa19 = new Pregunta(
   "Cuál es la basílica más grande de la cristiandad",
   ["La Catedral de Milán.", " San Pedro de El Vaticano.", "La Catedral de Sevilla.", "ninguno"],
-  3,
+  1,
   "arte",
   "facil"
 );
