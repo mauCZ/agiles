@@ -123,6 +123,5 @@ button{
   padding-left: 20px;
   padding-top: -10px;
   margin-bottom: 15px;
-  display: flex;
-  justify-content: space-between;
+
 }
