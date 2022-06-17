@@ -1118,6 +1118,7 @@ let pc21 = new Pregunta(
   "ciencias",
   "facil"
 );
+preguntas.push(pc21);
 
 
 let pd16 = new Pregunta(
