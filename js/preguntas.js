@@ -1034,7 +1034,7 @@ let pc15 = new Pregunta(
   "facil"
 );
 
-preguntas.push(pd16)
+preguntas.push(pd15)
 
 let pd16 = new Pregunta(
   "¿Cuántos Km de distancia mide una maratón?",
