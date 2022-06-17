@@ -93,8 +93,6 @@ button{
 
 .fa-te {
   color: gray;
-  width: 6;
-  height: 6;
 }
 
 #evaluacion {
@@ -125,4 +123,5 @@ button{
   padding-left: 20px;
   padding-top: -10px;
   margin-bottom: 15px;
+
 }
