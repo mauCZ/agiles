@@ -1109,10 +1109,10 @@ preguntas.push(pc20);
 let pc21 = new Pregunta(
   "Cual es la edad aproximada del universo?",
   [
-    "6.000 millones de aos",
-    "10.000 millones de aos",
-    "14.000 millones de aos",
-    "16.000 millones de aos"
+    "6.000 millones de años",
+    "10.000 millones de años",
+    "14.000 millones de años",
+    "16.000 millones de años"
   ],
   2,
   "ciencias",
