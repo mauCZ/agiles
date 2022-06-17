@@ -1380,4 +1380,19 @@ let pd33 = new Pregunta(
 );
 preguntas.push(pd33)
 
+let ph01 = new Pregunta(
+  "La contienda bélica que tuvo como consecuencia final la pérdida de la salida soberana al mar fue:",
+  [
+  "Guerra del Pacifico",
+  "Guerra del Chaco",
+  "Guerra del acre",
+  "Guerra del estaño"
+  ],
+  0,
+  "historia",
+  "facil"
+);
+preguntas.push(ph01)
+
+
 export { preguntas, Pregunta };
