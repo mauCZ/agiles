@@ -717,7 +717,7 @@ preguntas.push(pa3);
 let pa4 = new Pregunta(
   "A qué compositor debemos 'Las bodas de Fígaro'",
   ["Ludwig van Beethoven.", "Amadeus Mozart.", "Johann Sebastian Bach.", "antonio salieri"],
-  2,
+  1,
   "arte",
   "facil"
 );
@@ -725,7 +725,7 @@ preguntas.push(pa4);
 let pa5 = new Pregunta(
   "A quién pertenece el famoso mural 'Niña con globo'",
   ["Banksy.", "Robert Del Naja.", "Jean-Michel Basquiat.", "ninguno"],
-  1,
+  0,
   "arte",
   "facil"
 );
@@ -733,7 +733,7 @@ preguntas.push(pa5);
 let pa6 = new Pregunta(
   "En qué arte destacó Anna Pavlova a comienzos del siglo XX",
   ["Danza.", "Escultura.", "Pintura.", "ninguno"],
-  1,
+  0,
   "arte",
   "facil"
 );
@@ -741,7 +741,7 @@ preguntas.push(pa6);
 let pa7 = new Pregunta(
   "Qué se conoce como el séptimo arte",
   ["Arquitectura.", "Danza.", " Cine.", "musica"],
-  3,
+  2,
   "arte",
   "facil"
 );
@@ -749,7 +749,7 @@ preguntas.push(pa7);
 let pa8 = new Pregunta(
   "Qué autor firmó la ópera Rigoletto",
   ["Giuseppe Verdi.", "Antonio Vivaldi.", "Giacomo Puccini.", "ninguno"],
-  1,
+  0,
   "arte",
   "facil"
 );
@@ -757,7 +757,7 @@ preguntas.push(pa8);
 let pa9 = new Pregunta(
   "Además de Velázquez, quién pintó también Meninas.",
   ["Salvador Dalí.", "Joan Miró.", "Pablo Ruiz Picasso.", "ninguno"],
-  3,
+  2,
   "arte",
   "facil"
 );
@@ -766,7 +766,7 @@ preguntas.push(pa9);
 let pa10 = new Pregunta(
   "A qué famoso escultor pertenece la obra 'El pensador'.",
   ["Auguste Rodin.", "Miguel Angel.", "Gian Lorenzo Bernini.", "ninguno"],
-  1,
+  0,
   "arte",
   "facil"
 );
@@ -775,7 +775,7 @@ preguntas.push(pa10);
 let pa11 = new Pregunta(
   "A qué estilo corresponde la Catedral de Notre Dame de París",
   ["Románico.", "Barroco.", " Gótico.", "ninguno"],
-  3,
+  2,
   "arte",
   "facil"
 );
@@ -784,7 +784,7 @@ preguntas.push(pa11);
 let pa12 = new Pregunta(
   "Quién pintó 'Los fusilamientos del 3 de mayo'",
   ["Goya.", "Velázquez.", "Rembrandt.", "ninguno"],
-  1,
+  0,
   "arte",
   "facil"
 );
@@ -793,7 +793,7 @@ preguntas.push(pa12);
 let pa13 = new Pregunta(
   "Qué civilización nos dejó como legado la Dama de Elche",
   ["Los sumerios.", "Los cretenses.", "Los íberos.", "ninguno"],
-  3,
+  2,
   "arte",
   "facil"
 );
@@ -802,7 +802,7 @@ preguntas.push(pa13);
 let pa14 = new Pregunta(
   "Cuál sería el equivalente al Nobel en Arquitectura",
   ["Pulitzer.", "Pretzel.", "Pritzker.", "ninguno"],
-  3,
+  2,
   "arte",
   "facil"
 );
@@ -811,7 +811,7 @@ preguntas.push(pa14);
 let pa15 = new Pregunta(
   "Quién pintó el cuadro 'El matrimonio Arnolfini'.",
   ["El Bosco.", "Jan Van Eyck.", "Roger van der Wayden.", "ninguno"],
-  2,
+  1,
   "arte",
   "facil"
 );
@@ -820,7 +820,7 @@ preguntas.push(pa15);
 let pa16 = new Pregunta(
   "Cuáles son los tres órdenes clásicos de la arquitectura clásica",
   ["Dórico, jónico y corintio.", "Mudéjar, neomudéjar y mozárabe.", "Masamento, fuste y capitel.", "ninguno"],
-  1,
+  0,
   "arte",
   "dificil"
 );
@@ -829,7 +829,7 @@ preguntas.push(pa16);
 let pa17 = new Pregunta(
   "En qué país surgió el art decó",
   ["En Francia.", "En Estados Unidos.", "En Reino Unido.", "Alemania"],
-  2,
+  1,
   "arte",
   "dificil"
 );
@@ -838,7 +838,7 @@ preguntas.push(pa17);
 let pa18 = new Pregunta(
   "Cuál es la pinacoteca más grande de España",
   ["Museo del Prado.", "Museo Thyssen.", "Museo Nacional de Arte de Cataluña.", "ninguno"],
-  1,
+  0,
   "arte",
   "dificil"
 );
@@ -846,7 +846,7 @@ preguntas.push(pa18);
 
 let pa19 = new Pregunta(
   "Cuál es la basílica más grande de la cristiandad",
-  ["La Catedral de Milán.", "La Catedral de Sevilla.", " San Pedro de El Vaticano.", "ninguno"],
+  ["La Catedral de Milán.", " San Pedro de El Vaticano.", "La Catedral de Sevilla.", "ninguno"],
   3,
   "arte",
   "facil"
@@ -856,7 +856,7 @@ preguntas.push(pa19);
 let pa20 = new Pregunta(
   "Cuál es la única construcción religiosa en España que tiene 19 naves",
   ["La Sagrada Familia.", "La Mezquita de Córdoba.", "La catedral de Santiago de Compostela.", "ninguno"],
-  2,
+  1,
   "arte",
   "dificil"
 );
@@ -865,7 +865,7 @@ preguntas.push(pa20);
 let pa21 = new Pregunta(
   "Quién es el arquitecto del Museo Guggenheim de Bilbao",
   ["Frank Gehry.", "Norman Foster.", "Frank Lloyd Wright.", "ninguno"],
-  1,
+  0,
   "arte",
   "dificil"
 );
@@ -874,7 +874,7 @@ preguntas.push(pa21);
 let pa22 = new Pregunta(
   "En qué museo puedes contemplar la mayor colección de obras de Kandinsky",
   ["En el Louvre de París.", "En el Hermitage.", "En el Museo de Arte Moderno de Nueva York.", "ninguno"],
-  3,
+  2,
   "arte",
   "dificil"
 );
@@ -883,7 +883,7 @@ preguntas.push(pa22);
 let pa23 = new Pregunta(
   "Cuántas mujeres aparecen en el cuadro Las señoritas de Avignon",
   ["Cinco.", "Tres.", "Cuatro.", "ninguno"],
-  1,
+  0,
   "arte",
   "dificil"
 );
@@ -892,7 +892,7 @@ preguntas.push(pa23);
 let pa24 = new Pregunta(
   "Qué parte de la capilla sixtina pintó Miguel Ángel",
   ["Las paredes.", "El techo.", "Las columnas.", "ninguno"],
-  2,
+  1,
   "arte",
   "dificil"
 );
@@ -901,7 +901,7 @@ preguntas.push(pa24);
 let pa25 = new Pregunta(
   "En qué arte destacó Isadora Duncan",
   ["Pintura.", "Escultura.", "Danza.", "arquitectura"],
-  3,
+  2,
   "arte",
   "dificil"
 );
@@ -910,7 +910,7 @@ preguntas.push(pa25);
 let pa26 = new Pregunta(
   "Qué personaje de cómic creó Bob Kane cuando tenía 18 años",
   ["Spiderman.", "Dardervil.", "Batman.", "iron man"],
-  3,
+  2,
   "arte",
   "dificil"
 );
@@ -919,7 +919,7 @@ preguntas.push(pa26);
 let pa27 = new Pregunta(
   "¿Cuáles son las flores más famosas pintadas por Van Gogh?",
   ["Flor de loto.", "Girasoles.", "Margaritas.", "claveles"],
-  2,
+  1,
   "arte",
   "facil"
 );
@@ -928,7 +928,7 @@ preguntas.push(pa27);
 let pa28 = new Pregunta(
   "Cual fue el proposio principal de la torre eiffel",
   ["Monumento arquetectonico", "Atraer turistas", "Antena de comunicaciones", "ninguno"],
-  3,
+  2,
   "arte",
   "dificil"
 );
@@ -937,7 +937,7 @@ preguntas.push(pa28);
 let pa29 = new Pregunta(
   "Con que apodo fue conocido Niccolo Paganini",
   ["EL Violinista", "Violinista del Diablo", "El Violinista Feroz", "ninguno"],
-  2,
+  1,
   "arte",
   "facil"
 );
@@ -946,7 +946,7 @@ preguntas.push(pa29);
 let pa30 = new Pregunta(
   "Con que otro nombre se le conoce a la Monalisa",
   ["La Gioconda", "La Alejandra", "La Benedicta", "ninguno"],
-  1,
+  0,
   "arte",
   "dificil"
 );
@@ -960,7 +960,7 @@ let pc10 = new Pregunta(
     "Son C, H, O, N, S, P, Fe, Ca, Na, K y Mg",
     "Incluyen, entre otros, los oligoelementos, cuya proporción es inferior al 0,1% ",
   ],
-  4,
+  3,
   "ciencias",
   "facil"
 );
@@ -974,7 +974,7 @@ let pc11 = new Pregunta(
     "Las células contráctiles de los anélidos ",
     "Las células de las esponjas",
   ],
-  1,
+  0,
   "ciencias",
   "facil"
 );
@@ -989,7 +989,7 @@ let pc12 = new Pregunta(
     "La mitosis",
     "La síntesis de proteínas",
   ],
-  2,
+  1,
   "ciencias",
   "facil"
 );
@@ -999,7 +999,7 @@ preguntas.push(pc12);
 let pc13 = new Pregunta(
   "La formación de los ribosomas está ligada a la actividad de",
   ["el nucleolo", "el aparato de Golgi", "los cloroplastos", "el centrosoma "],
-  1,
+  0,
   "ciencias",
   "facil"
 );
@@ -1014,7 +1014,7 @@ let pc14 = new Pregunta(
     "Fibras de ARN asociadas a proteínas ",
     "Fibras de ADN empaquetadas con histonas ",
   ],
-  4,
+  3,
   "ciencias",
   "facil"
 );
@@ -1029,11 +1029,270 @@ let pc15 = new Pregunta(
   "El corte transversal del tallo de un cilio ",
   "El corte transversal de un microtúbulo"
   ],
-  3,
+  2,
   "ciencias",
   "facil"
 );
 
-preguntas.push(pc15)
+preguntas.push(pd16)
+
+let pd16 = new Pregunta(
+  "¿Cuántos Km de distancia mide una maratón?",
+  [
+  "41.85 km",
+  "42.16 km",
+  "43.77 km",
+  "43.45 km"
+  ],
+  1,
+  "deporte",
+  "dificil"
+);
+
+preguntas.push(pd16)
+
+let pd17 = new Pregunta(
+  "¿Cuáles son los cinco colores del anillo de los Juegos Olímpicos?",
+  [
+  "Azul, rojo, amarillo, verde y negro",
+  "Azul, rojo, amarillo, verde y violeta",
+  "índigo, rojo, morado, verde y negro",
+  "Azul, rojo, amarillo, naranja y verde"
+  ],
+  0,
+  "deporte",
+  "facil"
+);
+
+preguntas.push(pd17)
+
+let pd18 = new Pregunta(
+  "¿Qué deporte tiene un equipo llamado foil?",
+  [
+  "polo",
+  "golf",
+  "Esgrima",
+  "boxeo"
+  ],
+  2,
+  "deporte",
+  "dificil"
+);
+
+let pd19 = new Pregunta(
+  "¿Qué deporte de los Juegos Olímpicos implica pliegues y picas?",
+  [
+  "natacion",
+  "bolos",
+  "Esgrima",
+  "polo"
+  ],
+  0,
+  "deporte",
+  "dificil"
+);
+
+preguntas.push(pd19)
+
+let pd20 = new Pregunta(
+  "¿Manny Pacquiao es un boxeador legendario de qué país?",
+  [
+  "corea",
+  "filipinas",
+  "mexico",
+  "china"
+  ],
+  1,
+  "deporte",
+  "facil"
+);
+
+preguntas.push(pd20)
+
+
+let pd21 = new Pregunta(
+  "¿Cuánto dura un round típico de boxeo para hombres?",
+  [
+  "2 minutos",
+  "3 minutos",
+  "4 minutos",
+  "5 minutos"
+  ],
+  1,
+  "deporte",
+  "facil"
+);
+
+preguntas.push(pd21)
+
+let pd22 = new Pregunta(
+  "¿Cuántos puntos vale un tiro libre en baloncesto?",
+  [
+  "3 puntos",
+  "5 puntos",
+  "2 puntos",
+  "1 punto"
+  ],
+  3,
+  "deporte",
+  "facil"
+);
+
+preguntas.push(pd22)
+
+let pd23 = new Pregunta(
+  "¿Qué parte de tu cuerpo no debe tocar el balón en el fútbol?",
+  [
+  "cabeza",
+  "pierna",
+  "mano",
+  "espalda"
+  ],
+  2,
+  "deporte",
+  "facil"
+);
+preguntas.push(pd23)
+
+let pd24 = new Pregunta(
+  "¿Cuál de los siguientes deportes no usa una pelota?",
+  [
+  "golf",
+  "tenis",
+  "hockey",
+  "polo"
+  ],
+  2,
+  "deporte",
+  "dificil"
+);
+preguntas.push(pd24)
+
+let pd25 = new Pregunta(
+  "¿Cuántos jugadores hay en un equipo de béisbol?",
+  [
+  "10",
+  "9",
+  "8",
+  "7"
+  ],
+  1,
+  "deporte",
+  "dificil"
+);
+preguntas.push(pd25)
+
+let pd26 = new Pregunta(
+  "¿Cuál es el significado de NBA?",
+  [
+  "Administración Nacional de Canasta",
+  "Administración Nacional de Baloncesto",
+  "Asociación Nacional de Basquetbol",
+  "Administración Nacional de Canasta"
+  ],
+  2,
+  "deporte",
+  "dificil"
+);
+preguntas.push(pd26)
+
+let pd27 = new Pregunta(
+  "En baloncesto, el jugador que trae la pelota al otro lado de la cancha y corre la ofensiva se llama:",
+  [
+  "pivot",
+  "delantero",
+  "alero",
+  "base"
+  ],
+  3,
+  "deporte",
+  "dificil"
+);
+preguntas.push(pd27)
+
+
+let pd28 = new Pregunta(
+  "¿Cómo llamas a la cancha de fútbol?",
+  [
+  "terreno de juego",
+  "corte",
+  "campo",
+  "bol"
+  ],
+  0,
+  "deporte",
+  "facil"
+);
+preguntas.push(pd28)
+
+let pd29 = new Pregunta(
+  "¿Cuántos rounds hay en un solo juego de boxeo profesional?",
+  [
+  "6",
+  "8",
+  "12",
+  "15"
+  ],
+  2,
+  "deporte",
+  "facil"
+);
+preguntas.push(pd29)
+
+let pd30 = new Pregunta(
+  "¿En el boxeo, TKO significa?",
+  [
+  "Imitación técnica",
+  "Expulsión técnica",
+  "Krankout Técnico",
+  "Noqueo técnico"
+  ],
+  3,
+  "deporte",
+  "dificil"
+);
+preguntas.push(pd30)
+
+let pd31 = new Pregunta(
+  "Es el único deporte en el que los competidores corren hacia la meta, pero nunca la cruzan. ¿Qué es?",
+  [
+  "atletismo",
+  "lanzamiento de jabalina",
+  "natación",
+  "carrera de 800 metros"
+  ],
+  2,
+  "deporte",
+  "dificil"
+);
+preguntas.push(pd31)
+
+let pd32 = new Pregunta(
+  "¿Cuál era el nombre del primer caballo ganador en la carrera de caballos Grand National en 1839?",
+  [
+  "Afortunado",
+  "Campeon",
+  "Loteria",
+  "Jugador"
+  ],
+  2,
+  "deporte",
+  "dificil"
+);
+preguntas.push(pd32)
+
+let pd33 = new Pregunta(
+  "¿Cuál era el nombre de los deportes ficticios en Harry Potter?",
+  [
+  "Quidditch",
+  "Torneo de los tres magos",
+  "Greenwich",
+  "Fidditch"
+  ],
+  0,
+  "deporte",
+  "facil"
+);
+preguntas.push(pd33)
 
 export { preguntas, Pregunta };
