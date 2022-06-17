@@ -1034,7 +1034,91 @@ let pc15 = new Pregunta(
   "facil"
 );
 
-preguntas.push(pd15)
+preguntas.push(pc15)
+
+let pc16 = new Pregunta(
+  "Cuantas patas tiene una araña?",
+  [
+    "6",
+    "7",
+    "8",
+    "9"
+  ],
+  2,
+  "ciencias",
+  "facil"
+);
+preguntas.push(pc16);
+
+let pc17 = new Pregunta(
+  "Cuantos años llegan a vivir en libertad los elefantes?",
+  [
+    "20-40 años",
+    "40-60 años",
+    "60-80 años",
+    "80-100 años"
+  ],
+  1,
+  "ciencias",
+  "dificil"
+);
+preguntas.push(pc17);
+
+let pc18 = new Pregunta(
+  "Cual es el animal que mas personas mata en un año en el mundo?",
+  [
+    "mosquito",
+    "serpiente",
+    "araña",
+    "cocodrilo"
+  ],
+  0,
+  "ciencias",
+  "facil"
+);
+preguntas.push(pc18);
+
+let pc19 = new Pregunta(
+  "Que año fallecio Albert Einstein?",
+  [
+    "1953",
+    "1954",
+    "1955",
+    "1956"
+  ],
+  2,
+  "ciencias",
+  "dificil"
+);
+preguntas.push(pc19);
+
+let pc20 = new Pregunta(
+  "Cual es la edad aproximada de la tierra?",
+  [
+    "3.5 billones de años",
+    "4.5 billones de años",
+    "5.5 billones de años",
+    "6.5 billones de años"
+  ],
+  1,
+  "ciencias",
+  "facil"
+);
+preguntas.push(pc20);
+
+let pc21 = new Pregunta(
+  "Cual es la edad aproximada del universo?",
+  [
+    "6.000 millones de aos",
+    "10.000 millones de aos",
+    "14.000 millones de aos",
+    "16.000 millones de aos"
+  ],
+  2,
+  "ciencias",
+  "facil"
+);
+
 
 let pd16 = new Pregunta(
   "¿Cuántos Km de distancia mide una maratón?",
