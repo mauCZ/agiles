@@ -1,4 +1,4 @@
-import { preguntas, Pregunta } from "./preguntas.js";
+import { questionArray, Question } from "./preguntas.js";
 
 let preguntasSeleccionadas;
 let preg = [];
@@ -67,11 +67,3 @@ $(function () {
     mensajeElem.text('¡BUEN TRABAJO!')
   }
 });
-
-function filterQuestions(category) {
-  preguntasSeleccionadas = preguntas.filter(function (pregunta) {
-    if (pregunta.obtenerCategoria() == category) return true;
-    return false;
-  });
-  return preguntasSeleccionadas;
-}

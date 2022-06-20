@@ -1,13 +1,13 @@
-function respuestas() {
-    var ocultar = document.getElementById("evaluacion");
-    ocultar.style.display = 'none';
-    var mostrar = document.getElementById("respuestas");
-    mostrar.style.display = 'block';
+function showAnswers() {
+    var hide = document.getElementById("evaluacion");
+    hide.style.display = 'none';
+    var show = document.getElementById("respuestas");
+    show.style.display = 'block';
 }
 
-function evaluacion() {
-    var ocultar = document.getElementById("respuestas");
-    ocultar.style.display = 'none';
-    var mostrar = document.getElementById("evaluacion");
-    mostrar.style.display = 'block';
+function showEvaluation() {
+    var hide = document.getElementById("respuestas");
+    hide.style.display = 'none';
+    var show = document.getElementById("evaluacion");
+    show.style.display = 'block';
 }
