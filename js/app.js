@@ -72,7 +72,6 @@ function update() {
 
   wasAnswered = false;
   answersDefaultStyle();
-  // k = numeroAleatorio(0,preguntasSeleccionadas.length)
   if (questionIndex == roundNumberQuestions) {
     localStorage.setItem("correctos", answeredCorrectly);
     localStorage.setItem("incorrectos", answeredIncorrectly);
