@@ -16,6 +16,7 @@ body{
 main{
   width: 600px;
   max-width: 650px;
+  vertical-align: top;
 }
 h2{
   text-align: center;
@@ -81,5 +82,19 @@ i{
 }
 
 select option{
+  cursor: pointer;
+}
+
+.box-buttons button{
+  cursor: pointer;
+}
+
+.box-buttons2{
+  margin-top: 10px; 
+}
+.btn-history{
+  position:absolute;
+  margin-left: -370px;
+  margin-top: -190px;
   cursor: pointer;
 }

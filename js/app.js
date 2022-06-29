@@ -50,6 +50,7 @@ function decrementSeconds() {
   counterElem.text(timeToAnswerQuestion)
   timeToAnswerQuestion -= 1
 }
+
 function resetSeconds() {
   timeToAnswerQuestion = 10
   let counterElem = $('.counter')
@@ -132,6 +133,7 @@ function filterQuestions(category, difficult) {
   });
   return mix(selectedQuestionsCategory);
 }
+
 function mix(array) {
   let currentIndex = array.length, randomIndex;
   // While there remain elements to shuffle.
@@ -145,6 +147,7 @@ function mix(array) {
   }
   return array;
 }
+
 function markCorrectAnswer() {
   let respuestaActual = questionToShow["respuestas"][questionToShow.ind];
   let answers = $(".answer");
