@@ -1,9 +1,15 @@
-.table_div {
-    position: center;
-    align-content: center;
-    text-align: center;
-    
+.table_div{
+    overflow: auto;
+    width: 950px;
+    height: 500px;
 }
+
+.box-btn a{
+    margin-left: 50%;
+}
+
+
+
 h1{
     text-align: center;
 }
@@ -16,18 +22,22 @@ h1{
 }
 
 table {
-    
-    margin-left: 450px;
+    overflow: scroll;
+    margin-left: 47%;
     border-style: solid;
     padding: 10px;
 }
 
 table thead tr th {
-    border-style: solid;
     padding: 5px;
 }
 
 table tbody tr td {
-    border-style: solid;
     padding: 5px;
+
 }
+
+table, th, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+  }
