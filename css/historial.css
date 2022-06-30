@@ -1,0 +1,33 @@
+.table_div {
+    position: center;
+    align-content: center;
+    text-align: center;
+    
+}
+h1{
+    text-align: center;
+}
+.btn_atras{
+    text-align: center;
+    margin-top: 10px;
+    font-size: medium;
+    padding: 10px;
+    cursor: pointer;
+}
+
+table {
+    
+    margin-left: 450px;
+    border-style: solid;
+    padding: 10px;
+}
+
+table thead tr th {
+    border-style: solid;
+    padding: 5px;
+}
+
+table tbody tr td {
+    border-style: solid;
+    padding: 5px;
+}
