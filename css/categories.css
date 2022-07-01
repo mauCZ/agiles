@@ -93,8 +93,17 @@ select option{
   margin-top: 10px; 
 }
 .btn-history{
-  position:absolute;
-  margin-left: -370px;
-  margin-top: -190px;
   cursor: pointer;
 }
+.btn-iniciar{
+  cursor: pointer;
+}
+.box-btn{
+  width: 100%;
+  position:static;
+  display:flex;
+  justify-content: space-between;
+  background-color: gray;
+}
+
+
