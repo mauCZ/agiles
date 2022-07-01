@@ -83,3 +83,16 @@ i{
 select option{
   cursor: pointer;
 }
+.box-buttons button{
+  cursor: pointer;
+}
+
+.box-buttons2{
+  margin-top: 10px; 
+}
+.btn-ranking{
+  position:absolute;
+  margin-left: -370px;
+  margin-top: -190px;
+  cursor: pointer;
+}
