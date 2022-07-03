@@ -39,15 +39,22 @@ $(function () {
   let correctasElem = $('#correctas')
   let incorrectasElem = $('#incorrectas')
   let difficult = $('#difficult')
+  let puntajeElem = $('#puntaje')
 
   let difficultValue = localStorage.getItem('difficult')
   let preguntasCorrectas = localStorage.getItem('correctos')
   let preguntasIncorrectas = localStorage.getItem('incorrectos')
+
+  let puntaje = 0
+  let mult = (difficultValue == 'Facil'?1:2)
+  puntaje += mult * preguntasCorrectas
+
   
   correctasElem.text(preguntasCorrectas)
   incorrectasElem.text(preguntasIncorrectas)
   console.log(difficultValue)
   difficult.text(difficultValue)
+  puntajeElem.text(puntaje)
 
   let mensajeElem = $('#mensaje')
   if (preguntasIncorrectas > preguntasCorrectas) {

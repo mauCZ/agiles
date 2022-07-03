@@ -118,6 +118,11 @@ button{
   justify-content: space-between;
 }
 
+#puntaje_label{
+  font-size: 30px;
+  text-align: center;
+}
+
 .answer {
   font-size: 20px;
   padding-left: 20px;

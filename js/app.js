@@ -13,6 +13,7 @@ let preguntaActual,
   preguntasG = "",
   preguntasSeleccionadas,
   preguntasPorRonda = 10,
+  puntaje = 0,
   k = 0;
 
 $(function () {
