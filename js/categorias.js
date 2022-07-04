@@ -1,5 +1,8 @@
 
 let categoryButton = $(".cat");
+let open= document.getElementById('sesion')
+let form = document.getElementById('box-form')
+let close = document.getElementById('close')
 
 $(function () {
   localStorage.clear()
@@ -22,4 +25,14 @@ $(function () {
     localStorage.setItem('questionsNumber',questionsNumber);
   });
 });
+
+open.addEventListener('click',() => {
+  form.classList.add('show')
+})
+
+
+close.addEventListener('click',() => {
+  form.classList.remove('show')
+})
+
 
