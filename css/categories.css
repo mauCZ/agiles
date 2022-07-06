@@ -104,6 +104,7 @@ select option {
 
 .btn-history {
   cursor: pointer;
+  display: none;
 }
 
 .btn-iniciar {
