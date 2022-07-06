@@ -4,7 +4,15 @@ let open= document.getElementById('sesion')
 let form = document.getElementById('box-form')
 let close = document.getElementById('close')
 
+localStorage.setItem('id',"127356");
+let user = localStorage.getItem("id");
+
+
 $(function () {
+  if(user != null){
+    let btnHistorial = document.getElementById("btn-history");
+    btnHistorial.style.display = 'block';
+  }
   localStorage.clear()
   categoryButton.on("click", function (e) {
     let idSelected = $(this).attr('id')
