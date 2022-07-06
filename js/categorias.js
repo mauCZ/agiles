@@ -2,6 +2,7 @@
 let categoryButton = $(".cat");
 let open = document.getElementById('sesion')
 let form = document.getElementById('form-in')
+let formBox = document.getElementById('box-form')
 let close = document.getElementById('close')
 let submit = document.getElementById('submit')
 
@@ -33,12 +34,12 @@ $(function () {
 });
 
 open.addEventListener('click', () => {
-  form.classList.add('show')
+  formBox.classList.add('show')
 })
 
 
 close.addEventListener('click', () => {
-  form.classList.remove('show')
+  formBox.classList.remove('show')
 })
 
 submit.addEventListener('click', () => {
