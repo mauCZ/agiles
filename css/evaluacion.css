@@ -85,17 +85,14 @@ button{
 
 .fa-check {
   color: green;
-  margin-top: -25px;
 }
 
 .fa-xmark {
   color: red;
-  margin-top: -25px;
 }
 
 .fa-te {
   color: gray;
-  margin-top: -25px;
 }
 
 #evaluacion {
@@ -116,6 +113,9 @@ button{
 .question{
   font-size: 20px;
   font-weight: bold;
+  width: 600px;
+  display: flex;
+  justify-content: space-between;
 }
 
 .answer {
@@ -123,6 +123,5 @@ button{
   padding-left: 20px;
   padding-top: -10px;
   margin-bottom: 15px;
-  display: flex;
-  justify-content: space-between;
+
 }

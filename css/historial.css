@@ -1,8 +1,28 @@
+.table_div{
+    overflow: auto;
+    width: 950px;
+    height: 500px;
+}
+
+.box-btn a{
+    margin-left: 50%;
+}
+
+
+
 h1{
     text-align: center;
 }
+.btn_atras{
+    text-align: center;
+    margin-top: 10px;
+    font-size: medium;
+    padding: 10px;
+    cursor: pointer;
+}
+
 table {
-    overflow: scroll; 
+    overflow: scroll;
     margin-left: 47%;
     border-style: solid;
     padding: 10px;
@@ -21,14 +41,3 @@ table, th, td {
     border: 1px solid black;
     border-collapse: collapse;
   }
-  .box-btn a{
-    margin-left: 50%;
-}
-
-  .btn_atras{
-    text-align: center;
-    margin-top: 10px;
-    font-size: medium;
-    padding: 10px;
-    cursor: pointer;
-}

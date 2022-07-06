@@ -1,83 +1,68 @@
-import { preguntas, Pregunta } from "./preguntas.js";
+import { questionArray as importedQuestions, Question } from "./preguntas.js";
 
-let preguntaActual,
-  answered = false,
-  seconds = 10,
-  preguntasRespondidas = 0,
-  preguntasRespondidasCorrectamente = [],
-  preguntasRespondidasIncorrectamente = [],
-  preguntasNoRespondidasATiempo = [],
+let questionToShow,
+  timeToAnswerQuestion = 10,
   timer,
-  incorrectas = 0,
-  correctas = 0,
-  preguntasG = "",
-  preguntasSeleccionadas,
-  preguntasPorRonda = 10,
-  k = 0;
+  answeredIncorrectly = 0,
+  answeredCorrectly = 0,
+  wasAnswered = false,
+  questionsAnswered = "",
+  selectedQuestionsCategory,
+  roundNumberQuestions = 10,
+  questionIndex = 0;
 
 $(function () {
-  if(localStorage.getItem('difficult') == null){
-    localStorage.setItem('difficult','Facil');
-  }
-  if(localStorage.getItem('questionsNumber') == null){
-    console.log("gaa")
-    localStorage.setItem('questionsNumber',10);
-  }
-
-  preguntasSeleccionadas = filterQuestions(localStorage.getItem("category"),localStorage.getItem('difficult'));
-
-  preguntasPorRonda = Math.min(localStorage.getItem('questionsNumber'),preguntasSeleccionadas.length);
-
-  // k = numeroAleatorio(0,preguntasSeleccionadas.length)
-  updateQuestionNumber(k);
-  preguntaActual = preguntasSeleccionadas[k];
-  // showNextQuestion();
+  selectedQuestionsCategory = filterQuestions(localStorage.getItem("category"), localStorage.getItem('difficult'));
+  roundNumberQuestions = Math.min(localStorage.getItem('questionsNumber'), selectedQuestionsCategory.length);
+  updateQuestionNumber(questionIndex);
+  questionToShow = selectedQuestionsCategory[questionIndex];
   update()
   let answer_options = $(".answer");
   answer_options.on("click", function (ev) {
-    if (!answered) {
+    if (!wasAnswered) {
       let icon = $(this).find("i");
       let respuesta = ev.target.innerText;
-      if (preguntaActual.esRespuestaCorrecta(respuesta)) {
+      if (questionToShow.isCorrectAnswer(respuesta)) {
         $(this).toggleClass("correct-answer");
         icon.toggleClass("fa-check");
-        correctas += 1;
-        preguntasG = preguntasG + ";correcto/" + preguntaActual.obtenerPregunta()+"/"+preguntaActual.obtenerRespuestaCorrecta();
+        answeredCorrectly += 1;
+        questionsAnswered = questionsAnswered + ";correcto/" + questionToShow.getQuestion() + "/" + questionToShow.getCorrectAnswer();
         clearInterval(timer)
         timer = null
         setTimeout(update, 1000);
       } else {
         $(this).toggleClass("incorrect-answer");
         icon.toggleClass("fa-xmark");
-        incorrectas += 1;
-        preguntasG = preguntasG + ";incorrecto/" + preguntaActual.obtenerPregunta()+"/"+preguntaActual.obtenerRespuestaCorrecta();
+        answeredIncorrectly += 1;
+        questionsAnswered = questionsAnswered + ";incorrecto/" + questionToShow.getQuestion() + "/" + questionToShow.getCorrectAnswer();
         markCorrectAnswer();
         clearInterval(timer)
         timer = null
         setTimeout(update, 1000);
       }
-      answered = true;
+      wasAnswered = true;
     }
   });
 });
 
 function decrementSeconds() {
   let counterElem = $('.counter')
-  counterElem.text(seconds)
-  seconds -= 1
+  counterElem.text(timeToAnswerQuestion)
+  timeToAnswerQuestion -= 1
 }
+
 function resetSeconds() {
-  seconds = 10
+  timeToAnswerQuestion = 10
   let counterElem = $('.counter')
-  counterElem.text(seconds)
+  counterElem.text(timeToAnswerQuestion)
 }
 
 function update() {
 
   timer = setInterval(() => {
-    if (seconds == 0) {
-      incorrectas += 1
-      preguntasG = preguntasG + ";TE/" + preguntaActual.obtenerPregunta()+"/"+preguntaActual.obtenerRespuestaCorrecta();
+    if (timeToAnswerQuestion == 0) {
+      answeredIncorrectly += 1
+      questionsAnswered = questionsAnswered + ";TE/" + questionToShow.getQuestion() + "/" + questionToShow.getCorrectAnswer();
       clearInterval(timer)
       timer = null
       update()
@@ -86,28 +71,29 @@ function update() {
     decrementSeconds()
   }, 1000);
 
-  answered = false;
+  wasAnswered = false;
   answersDefaultStyle();
-  // k = numeroAleatorio(0,preguntasSeleccionadas.length)
-  if (k == preguntasPorRonda) {
-    localStorage.setItem("correctos", correctas);
-    localStorage.setItem("incorrectos", incorrectas);
+  if (questionIndex == roundNumberQuestions) {
+    localStorage.setItem("correctos", answeredCorrectly);
+    localStorage.setItem("incorrectos", answeredIncorrectly);
 
-    localStorage.setItem("preguntas", preguntasG);
+    localStorage.setItem("preguntas", questionsAnswered);
 
     window.location.replace("../html/evaluacion.html");
-    answered = true;
+    wasAnswered = true;
   } else {
-    preguntaActual = preguntasSeleccionadas[k];
-    updateQuestionNumber(k);
+    questionToShow = selectedQuestionsCategory[questionIndex];
+    updateQuestionNumber(questionIndex);
     showNextQuestion();
   }
-  k += 1
+  questionIndex += 1
 }
+
 function updateQuestionNumber(num) {
   let numbElem = $("#numero");
-  numbElem.text(k + 1);
+  numbElem.text(questionIndex + 1);
 }
+
 function answersDefaultStyle() {
   let answer_options = $(".answer");
   answer_options.each(function () {
@@ -123,13 +109,11 @@ function showNextQuestion() {
   let answersElems = $(".answer");
   let selectedCategory = localStorage.getItem("category");
   let counter = $(".counter")
-  let preguntasPorRonda = $('#preguntasPorRonda')
-  preguntasPorRonda.text(Math.min(localStorage.getItem("questionsNumber"),preguntasSeleccionadas.length))
-  category.text(
-    selectedCategory.charAt(0).toUpperCase() + selectedCategory.slice(1)
-  );
-  questionElem.text(preguntaActual.pregunta);
-  let answers = preguntaActual.respuestas;
+  let questionsPerRound = $('#preguntasPorRonda')
+  questionsPerRound.text(Math.min(localStorage.getItem("questionsNumber"), selectedQuestionsCategory.length))
+  category.text(selectedCategory.charAt(0).toUpperCase() + selectedCategory.slice(1));
+  questionElem.text(questionToShow.pregunta);
+  let answers = questionToShow.respuestas;
   let i = 0;
   answersElems.each(function () {
     $(this).text(answers[i]);
@@ -138,15 +122,20 @@ function showNextQuestion() {
   });
 }
 
-function filterQuestions(category,difficult) {
-  preguntasSeleccionadas = preguntas.filter(function (pregunta) {
-    if (pregunta.obtenerCategoria() == category && pregunta.obtenerDificultad()==difficult.toLowerCase()) return true;
+function filterQuestions(category, difficult) {
+  selectedQuestionsCategory = importedQuestions.filter(function (question) {
+    if (category == "variado") {
+      if (question.getDifficult() == difficult.toLowerCase()) return true;
+      return false;
+    }
+    else if (question.getCategory() == category && question.getDifficult() == difficult.toLowerCase()) return true;
     return false;
   });
-  return mezclar(preguntasSeleccionadas);
+  return mix(selectedQuestionsCategory);
 }
-function mezclar(array) {
-  let currentIndex = array.length,  randomIndex;
+
+function mix(array) {
+  let currentIndex = array.length, randomIndex;
   // While there remain elements to shuffle.
   while (currentIndex != 0) {
     // Pick a remaining element.
@@ -158,8 +147,9 @@ function mezclar(array) {
   }
   return array;
 }
+
 function markCorrectAnswer() {
-  let respuestaActual = preguntaActual["respuestas"][preguntaActual.ind];
+  let respuestaActual = questionToShow["respuestas"][questionToShow.ind];
   let answers = $(".answer");
   answers.each(function () {
     if ($(this).text() == respuestaActual) {

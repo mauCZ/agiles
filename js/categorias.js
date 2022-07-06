@@ -1,10 +1,9 @@
-let btns = $(".cat");
 
+let categoryButton = $(".cat");
 
 $(function () {
   localStorage.clear()
-
-  btns.on("click", function (e) {
+  categoryButton.on("click", function (e) {
     let idSelected = $(this).attr('id')
     if(idSelected=='cat-deporte'){
       localStorage.setItem('category', 'deporte')
@@ -17,14 +16,10 @@ $(function () {
     }else if(idSelected == 'cat-variado'){
       localStorage.setItem('category', 'variado')
     }
-
-    let idDifficult = $(".difficult").val()
-    localStorage.setItem('difficult',idDifficult);
-
+    let difficult = $(".difficult").val()
+    localStorage.setItem('difficult',difficult);
     let questionsNumber =$('.cantidad').val()
     localStorage.setItem('questionsNumber',questionsNumber);
-    
   });
-
 });
 

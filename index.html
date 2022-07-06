@@ -1,91 +1,103 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Preguntas</title>
 
-    <link rel="stylesheet" href="../css/categories.css" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
-      integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Handlee&display=swap"
-      rel="stylesheet"
-    />
-  </head>
-  <body>
-    <main>
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Preguntas</title>
 
-      <div class="box-btn">
-        <a href="/html/ranking.html">
-          <button class="btn-ranking">Ver Ranking</button>
-        </a>
+  <link rel="stylesheet" href="../css/categories.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+    integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Handlee&display=swap" rel="stylesheet" />
+</head>
+
+<body>
+  <div class="form">
+    <form action="" method="post">
+      <div>
+        <label for="username">Usuario:</label>
+        <input type="text" id="username" name="username">
       </div>
 
-      <h2>Elige una categoria:</h2>
-      <div class="categories">
-        <button class="cat" id="cat-deporte">
-          <a href="./html/pregunta.html">
-            <i class="fa-solid fa-baseball-bat-ball"></i>
-            Deporte</a
-          >
-        </button>
-        <button class="cat" id="cat-historia">
-          <a href="./html/pregunta.html">
-            <i class="fa-solid fa-landmark"></i>
-            Historia de Bolivia</a
-          >
-        </button>
-        <button class="cat" id="cat-arte">
-          <a href="./html/pregunta.html">
-            <i class="fa-solid fa-paintbrush"></i>
-            Arte</a
-          >
-        </button>
-        <button class="cat" id="cat-ciencias">
-          <a href="./html/pregunta.html">
-            <i class="fa-solid fa-flask"></i>
-            Ciencias Naturales</a
-          >
-        </button>
-        <button class="cat" id="cat-variado">
-          <a href="./html/pregunta.html">
-            <i class="fa-solid fa-question"></i>
-            Variado</a
-          >
-        </button>
+      <div>
+        <label for="pass">Contraseña:</label>
+        <input type="password" id="pass" name="password" minlength="8" required>
+      </div>
+    </form>
+    <button type="submit"> Iniciar Sesion</button>
+    <button> Cancelar</button>
+  </div>
+  <div class="box-btn">
+    <a href="/html/historial.html">
+      <button class="btn-history">ver mi historial</button>
+    </a>
+    <a href="/html/ranking.html">
+      <button class="btn-ranking">Ver Ranking</button>
+    </a>
+    <button class="btn-iniciar"> Iniciar Sesion</button>
+  </div>
+  <div>
+    <main>
 
-        <div class="difficult-elem">
-          <label class="name">Dificultad</label>
-          <select class="difficult" name="difficult" id="difficult">
-            <option value="Facil">Facil</option>
-            <option value="Dificil">Dificil</option>
-          </select>
-        </div>
+      <div class="box-cat">
+        <h2>Elige una categoria:</h2>
 
-        <div class="cantidad-elem">
-          <label for="cantidad">Cantidad de preguntas:</label>
-          <select class="cantidad" name="cantidad" id="cantidad">
-            <option value="5">5</option>
-            <option value="10" selected>10</option>
-          </select>
+        <div class="categories">
+          <button class="cat" id="cat-deporte">
+            <a href="./html/pregunta.html">
+              <i class="fa-solid fa-baseball-bat-ball"></i>
+              Deporte</a>
+          </button>
+          <button class="cat" id="cat-historia">
+            <a href="./html/pregunta.html">
+              <i class="fa-solid fa-landmark"></i>
+              Historia de Bolivia</a>
+          </button>
+          <button class="cat" id="cat-arte">
+            <a href="./html/pregunta.html">
+              <i class="fa-solid fa-paintbrush"></i>
+              Arte</a>
+          </button>
+          <button class="cat" id="cat-ciencias">
+            <a href="./html/pregunta.html">
+              <i class="fa-solid fa-flask"></i>
+              Ciencias Naturales</a>
+          </button>
+          <button class="cat" id="cat-variado">
+            <a href="./html/pregunta.html">
+              <i class="fa-solid fa-question"></i>
+              Variado</a>
+          </button>
+
+          <div class="difficult-elem">
+            <label class="name">Dificultad</label>
+            <select class="difficult" name="difficult" id="difficult">
+              <option value="Facil">Facil</option>
+              <option value="Dificil">Dificil</option>
+            </select>
+          </div>
+
+          <div class="cantidad-elem">
+            <label for="cantidad">Cantidad de preguntas:</label>
+            <select class="cantidad" name="cantidad" id="cantidad">
+              <option value="5">5</option>
+              <option value="10" selected>10</option>
+            </select>
+          </div>
         </div>
       </div>
     </main>
-    <script
-      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
-      integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    ></script>
-    <script src="./js/categorias.js" type="module"></script>
-  </body>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
+    integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="./js/categorias.js" type="module"></script>
+</body>
+
 </html>

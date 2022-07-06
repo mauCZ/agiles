@@ -1,4 +1,4 @@
-import { preguntas, Pregunta } from "./preguntas.js";
+import { questionArray, Question } from "./preguntas.js";
 
 let preguntasSeleccionadas;
 let preg = [];
@@ -19,14 +19,14 @@ $(function () {
     $(questionsElems[indice_elem_html]).text(nro_pregunta + ". " + question[1]);
     $(answersElems[indice_elem_html]).text("R. " + question[2]);
     if (question[0] == 'correcto') {
-      $(answersElems[indice_elem_html]).append("<i class='fa-solid fa-check fa-2x'></i>");
+      $(questionsElems[indice_elem_html]).append("<i class='fa-solid fa-check fa-2x'></i>");
     }
     else {
       if (question[0] == 'incorrecto') {
-        $(answersElems[indice_elem_html]).append("<i class='fa-solid fa-xmark fa-2x'></i>");
+        $(questionsElems[indice_elem_html]).append("<i class='fa-solid fa-xmark fa-2x'></i>");
       }
       else {
-        $(answersElems[indice_elem_html]).append("<i class='fa-solid fa-te fa-2x'>TE</i>");
+        $(questionsElems[indice_elem_html]).append("<i class='fa-solid fa-te fa-2x'>TE</i>");
       }
     }
     nro_pregunta += 1;
@@ -67,11 +67,3 @@ $(function () {
     mensajeElem.text('¡BUEN TRABAJO!')
   }
 });
-
-function filterQuestions(category) {
-  preguntasSeleccionadas = preguntas.filter(function (pregunta) {
-    if (pregunta.obtenerCategoria() == category) return true;
-    return false;
-  });
-  return preguntasSeleccionadas;
-}
