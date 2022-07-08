@@ -5,6 +5,7 @@ let form = document.getElementById('form-in')
 let formBox = document.getElementById('box-form')
 let close = document.getElementById('close')
 let submit = document.getElementById('submit')
+let errorAuthentication = document.getElementById('err')
 
 let userID = localStorage.getItem('id');
 $(function () {
@@ -42,18 +43,31 @@ close.addEventListener('click', () => {
   formBox.classList.remove('show')
 })
 
-submit.addEventListener('click', () => {
-  form.onsubmit = async (e) => {
-    e.preventDefault()
-    const dataForm = new FormData(form)
-    const data = Object.fromEntries(dataForm.entries)
-    const res = await fetch('',{
-      method: 'POST',
-      body: JSON.stringify(data),
-      Headers: {
-        'Content-Type': 'application/json',
-      }
-    })
+form.addEventListener('submit', (e) => {
+  e.preventDefault()
+  const username= document.getElementById('username').value
+  const pass= document.getElementById('pass').value
+  const data = {username:username,password:pass}
+  console.log(data)
+  fetch('http://agiles-server.herokuapp.com/api/login', {
+    method: 'POST',
+    body:JSON.stringify(data),
+    headers:{
+      'Content-type': 'application/json'
+    }
+  })
+  .then(res => res.json())
+  .then(res => {
+    console.log(res.successful)
+    showError(res.successful)
+  })
+})
+
+function showError(message){
+  if(message){
+    alert('valido')
+    errorAuthentication.classList.remove('show')
   }
-  
-});
+  errorAuthentication.classList.add('show')
+
+}

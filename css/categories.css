@@ -157,8 +157,16 @@ form div{
 }
 
 .btn-form{
-  display: flex;
+  display:inline-block;
   margin: 10px;
+  margin-left: 50px;
+  align-self: center;
+  justify-items: center;
+}
+
+.btn-form i{
+  color: red;
+  opacity: 1;
 }
 
 .btn-form button{

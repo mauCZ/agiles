@@ -20,13 +20,14 @@
       href="https://fonts.googleapis.com/css2?family=Handlee&display=swap"
       rel="stylesheet"
     />
+
   </head>
 
   <body>
     <div class="box-form" id="box-form">
       <div class="form">
         <h3>Inicio Sesion</h3>
-        <form class="form-in" >
+        <form class="form-in" id="form-in">
           <div>
             <label for="username">Usuario:</label>
             <input type="text" id="username" name="username" />
@@ -34,16 +35,14 @@
 
           <div>
             <label for="pass">Contraseña:</label>
-            <input
-              type="password"
-              id="pass"
-              name="password"
-              required="true"
-            />
+            <input type="password" id="pass" name="password" required="true" />
           </div>
+
           <div class="btn-form">
-            <i id="error"></i>
-            <button id="submit">Aceptar</button>
+            <div id="err">
+              <i id="error"></i>
+            </div>
+            <button id="submit" type="submit">Aceptar</button>
             <button id="close">Cancelar</button>
           </div>
         </form>
@@ -53,7 +52,7 @@
       <a href="/html/historial.html">
         <button class="btn-history" id="btn-history">ver mi historial</button>
       </a>
-      <button class="btn-iniciar" id="sesion" >Iniciar Sesion</button>
+      <button class="btn-iniciar" id="sesion">Iniciar Sesion</button>
     </div>
     <div>
       <main>
@@ -118,6 +117,9 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     ></script>
+    <!--
+      
+    -->
     <script src="./js/categorias.js" type="module"></script>
   </body>
 </html>
