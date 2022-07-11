@@ -1,5 +1,7 @@
 $(function () {
   let contenidoDeLaTablaHistorial = $(".table_body");
+  const templateUser = sessionStorage.getItem('templateUser')
+  const createTemplateUser = document.getElementById('box-sesion').innerHTML=templateUser
   contenidoDeLaTablaHistorial.each(function () {
     for (let i = 0; i < 50; i++) {
       $(this).append(
@@ -8,3 +10,5 @@ $(function () {
     }
   });
 });
+
+

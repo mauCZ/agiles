@@ -19,6 +19,10 @@ h1{
     cursor: pointer;
 }
 
+.box-sesion{
+    text-align: right;
+}
+
 table {
     overflow: scroll;
     margin-left: 47%;
@@ -39,3 +43,4 @@ table, th, td {
     border: 1px solid black;
     border-collapse: collapse;
   }
+
