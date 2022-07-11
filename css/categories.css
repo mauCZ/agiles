@@ -180,7 +180,11 @@ form div{
   opacity: 0;
 }
 
-.username{
+.user-name{
   font-size: 20px;
   margin: 30px 20px 35px 30px;
+}
+
+.box-sesion{
+  display: inline-block;
 }

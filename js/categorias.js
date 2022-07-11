@@ -6,7 +6,6 @@ let close = document.getElementById("close");
 let submit = document.getElementById("submit");
 let errorAuthentication = document.getElementById("err");
 let messageError = document.getElementById("error");
-
 $(function () {
   localStorage.clear();
   categoryButton.on("click", function (e) {
@@ -53,13 +52,13 @@ form.addEventListener("submit", (e) => {
     .then((res) => res.json())
     .then((res) => {
       console.log(res.successful);
-      
+
       if (res.successful) {
-        sessionStorage.setItem("id", re.id);
-        const templateUser = `<i class="username">${res.username}</i>`;
-        sessionStorage.setItem("templateUser", templateUser);
+        sessionStorage.setItem("id", res.id);
+        sessionStorage.setItem("username", res.username);
         sessionStorage.setItem("sesionExist", JSON.stringify(res.successful));
-      }else{
+        loadDate()
+      } else {
         showError(res.successful);
       }
     });
@@ -75,18 +74,27 @@ function showError(message) {
 }
 
 function loadDate() {
-  const sesionExist = sessionStorage.getItem('sesionExist')
-  if(sesionExist == 'true'){
-  const templateUser =sessionStorage.getItem("templateUser") 
-    const sesion = (document.getElementById("box-sesion").innerHTML =
-      templateUser);
+  const sesionExist = sessionStorage.getItem("sesionExist");
+  if (sesionExist == "true") {
+    const userName = sessionStorage.getItem('username')
+    const templateUser = `<i class="user-name">${userName}</i> 
+                      <button id="cerrarSesion">Cerrar Sesion</button>`;
+    const sesion = document.getElementById("box-sesion")
+    sesion.innerHTML=templateUser;
     formBox.classList.remove("show");
+    console.log(sesion)
     const showHistory = document
       .getElementById("btn-history")
       .classList.add("show");
   }
- 
 }
+let closeSesion = document.getElementById("cerrarSesion")
+console.log(closeSesion)
+
+/*function closeSesion(){
+  sessionStorage.clear()
+  window.location.reload()
+}*/
 
 
 
