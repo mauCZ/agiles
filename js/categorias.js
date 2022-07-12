@@ -40,7 +40,9 @@ form.addEventListener("submit", (e) => {
   e.preventDefault();
   const username = document.getElementById("username").value;
   const pass = document.getElementById("pass").value;
-  const data = { username: username, password: pass };
+  const data = { username: username, 
+                password: pass 
+              };
   console.log(data);
   fetch("http://agiles-server.herokuapp.com/api/login", {
     method: "POST",

@@ -1,6 +1,12 @@
 import { questionArray, Question } from "./preguntas.js";
 
-let preguntasSeleccionadas;
+const userName = sessionStorage.getItem('username')
+  const templateUser = `
+                        <i>${userName}</i>
+                        <button>cerrar sesion</button>
+                      `
+  const createTemplateUser = document.getElementById('box-sesion').innerHTML=templateUser
+
 let preg = [];
 let question = [];
 $(function () {
