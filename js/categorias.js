@@ -36,6 +36,8 @@ close.addEventListener("click", () => {
   formBox.classList.remove("show");
 });
 
+
+
 form.addEventListener("submit", (e) => {
   e.preventDefault();
   const username = document.getElementById("username").value;

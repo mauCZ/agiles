@@ -1,11 +1,14 @@
+let cerrarSesion;
 $(function () {
   let contenidoDeLaTablaHistorial = $(".table_body");
-  const userName = sessionStorage.getItem('username')
+  const userName = sessionStorage.getItem("username");
   const templateUser = `
                         <i>${userName}</i>
-                        <button>cerrar sesion</button>
-                      `
-  const createTemplateUser = document.getElementById('box-sesion').innerHTML=templateUser
+                        <button class="btn-cerrar-sesion" id="cerrarSesion">cerrar sesion</button>
+                      `;
+  const createTemplateUser = (document.getElementById("box-sesion").innerHTML =
+    templateUser);
+  
   contenidoDeLaTablaHistorial.each(function () {
     for (let i = 0; i < 50; i++) {
       $(this).append(
@@ -14,5 +17,7 @@ $(function () {
     }
   });
 });
-
-
+window.onload = () => {
+  cerrarSesion = document.getElementById("cerrarSecion");
+  console.log(cerrarSesion);
+}
