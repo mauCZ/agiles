@@ -70,21 +70,20 @@ $(function () {
       color: "darkred",
       "font-weight": "bold",
     });
-    // mensajeElem.css("color","darkgreen")
+    
     mensajeElem.text("VUELVE A INTENTARLO :(");
   } else {
     mensajeElem.css({
       color: "darkgreen",
       "font-weight": "bold",
     });
-    // mensajeElem.css("color","darkred")
     mensajeElem.text("¡BUEN TRABAJO!");
   }
 });
 
-const idUser = sessionStorage.getItem("id");
 function guardarInformacionRonda() {
   if (userExist) {
+    const idUser = sessionStorage.getItem("id");
     console.log(idUser);
     const difficult = localStorage.getItem("difficult");
     const questionsNumber = localStorage.getItem("questionsNumber");
