@@ -67,6 +67,7 @@ function clearFrom(){
 close.addEventListener("click", () => {
   messageError.classList.remove('err')
   formBox.classList.remove("show");
+  console.log("CERRATE")
 });
 
 function buscarUsuario(username, password) {
@@ -85,12 +86,12 @@ function buscarUsuario(username, password) {
 };
 
 form.addEventListener("submit", (e) => {
+  console.log(e.target)
   e.preventDefault();
   const username = document.getElementById("username").value;
-
   const pass = document.getElementById("pass").value;
   const data = { username: username, password: pass };
-  console.log(data);
+  // console.log(data);
   fetch("https://agiles-2022.herokuapp.com/login", {
     method: "POST",
     body: JSON.stringify(data),
@@ -100,17 +101,17 @@ form.addEventListener("submit", (e) => {
   })
     .then((res) => res.json())
     .then((res) => {
-      console.log(res);
+      // console.log(res);
 
       if (res.succesfull) {
-        console.log(res.id)
+        // console.log(res.id)
         messageError.classList.remove('err')
         sessionStorage.setItem("id", res.id);
         sessionStorage.setItem("username", res.username);
         sessionStorage.setItem("sesionExist", JSON.stringify(true));
         loadDate();
       } else {
-        console.log('error de usuario')
+        // console.log('error de usuario')
         messageError.classList.add('err')
        
       }
