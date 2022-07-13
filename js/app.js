@@ -76,9 +76,7 @@ function update() {
   if (questionIndex == roundNumberQuestions) {
     localStorage.setItem("correctos", answeredCorrectly);
     localStorage.setItem("incorrectos", answeredIncorrectly);
-
     localStorage.setItem("preguntas", questionsAnswered);
-
     window.location.replace("../html/evaluacion.html");
     wasAnswered = true;
   } else {
