@@ -8,8 +8,6 @@ let messageError = document.getElementById("error");
 const cerrarSesion = document.getElementById("cerrarSesion");
 
 
-
-
 $(function () {
   localStorage.clear();
   categoryButton.on("click", function (e) {
@@ -34,9 +32,16 @@ $(function () {
 
 open.addEventListener("click", () => {
   formBox.classList.add("show");
+  clearFrom()
 });
 
+function clearFrom(){
+  messageError.classList.remove('err')
+  form.reset()
+}
+
 close.addEventListener("click", () => {
+  messageError.classList.remove('err')
   formBox.classList.remove("show");
 });
 
@@ -99,6 +104,8 @@ cerrarSesion.addEventListener("click", () => {
 });
 
 
+
 window.onload = () => {
   loadDate();
+  
 };
