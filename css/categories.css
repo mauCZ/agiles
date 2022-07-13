@@ -86,9 +86,7 @@ a i {
   width: auto;
 }
 
-i {
-  display: inline-block;
-}
+
 
 select option {
   cursor: pointer;
@@ -104,7 +102,7 @@ select option {
 
 .btn-history {
   cursor: pointer;
-  display: none;
+  opacity: 0;
 }
 
 .btn-iniciar {
@@ -157,9 +155,14 @@ form div{
 }
 
 .btn-form{
-  display: flex;
+  display:inline-block;
   margin: 10px;
+  margin-left: 50px;
+  align-self: center;
+  justify-items: center;
 }
+
+
 
 .btn-form button{
   margin: 10px;
@@ -169,4 +172,35 @@ form div{
 .show{
   pointer-events: auto;
   opacity: 1;
+}
+
+
+
+.ocultar{
+  opacity: 0;
+  pointer-events: none;
+}
+
+.err{
+  color: red;
+  opacity: 0;
+}
+
+.user-name{
+  font-size: 20px;
+  margin: 30px 20px 35px 30px;
+}
+
+.box-sesion{
+  display: inline-block;
+}
+
+.btn-estilo{
+  cursor: pointer;
+  margin-top: 230px;
+}
+
+.btn-cerrar{
+  opacity: 0;
+  pointer-events: none;
 }

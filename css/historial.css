@@ -19,6 +19,17 @@ h1{
     cursor: pointer;
 }
 
+.box-sesion{
+    text-align: right;
+    font-size: 20px;
+    
+}
+
+.box-sesion button{
+    font-size: 18px;
+    width: 200px;   
+}
+
 table {
     overflow: scroll;
     margin-left: 47%;
@@ -39,3 +50,14 @@ table, th, td {
     border: 1px solid black;
     border-collapse: collapse;
   }
+
+button{
+    font-size: large;
+  font-family: 'Handlee', cursive;
+}
+
+
+.btn-cerrar-sesion{
+    cursor: pointer;
+    width: 240px;
+}

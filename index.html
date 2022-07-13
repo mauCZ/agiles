@@ -26,7 +26,7 @@
     <div class="box-form" id="box-form">
       <div class="form">
         <h3>Inicio Sesion</h3>
-        <form class="form-in" >
+        <form class="form-in" id="form-in">
           <div>
             <label for="username">Usuario:</label>
             <input type="text" id="username" name="username" />
@@ -34,16 +34,14 @@
 
           <div>
             <label for="pass">Contraseña:</label>
-            <input
-              type="password"
-              id="pass"
-              name="password"
-              required="true"
-            />
+            <input type="password" id="pass" name="password" required="true" />
           </div>
+
           <div class="btn-form">
-            <i id="error"></i>
-            <button id="submit">Aceptar</button>
+            <div id="err" class="err">
+              <i id="error">usuario o contraseña invalidos</i>
+            </div>
+            <button id="submit" type="submit">Aceptar</button>
             <button id="close">Cancelar</button>
           </div>
         </form>
@@ -53,7 +51,10 @@
       <a href="/html/historial.html">
         <button class="btn-history" id="btn-history">ver mi historial</button>
       </a>
-      <button class="btn-iniciar" id="sesion" >Iniciar Sesion</button>
+      <div id="box-sesion" class="box-sesion">    
+          
+        <button class="btn-iniciar" id="sesion">Iniciar Sesion</button>
+      </div>
     </div>
     <div>
       <main>
@@ -111,7 +112,9 @@
         </div>
       </main>
     </div>
-
+    <div>
+      <button class="btn-cerrar btn-estilo" id="cerrarSesion" >Cerrar Sesion</button>  
+    </div>
     <script
       src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
       integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
@@ -119,5 +122,6 @@
       referrerpolicy="no-referrer"
     ></script>
     <script src="./js/categorias.js" type="module"></script>
+
   </body>
 </html>
