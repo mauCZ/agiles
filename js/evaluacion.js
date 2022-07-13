@@ -1,15 +1,22 @@
-import { questionArray, Question } from "./preguntas.js";
-
+//import { questionArray, Question } from "./preguntas.js";
+let cerrarSesion = document.getElementById('cerrarSesion')
 const userExist = sessionStorage.getItem("sesionExist");
 if (userExist) {
   const userName = sessionStorage.getItem("username");
   const templateUser = `
                         <i>${userName}</i>
-                        <button>cerrar sesion</button>
+                        
                       `;
   const createTemplateUser = (document.getElementById("box-sesion").innerHTML =
     templateUser);
 }
+
+cerrarSesion.addEventListener('click',() => {
+  console.log('cerando sesion')
+  window.location.replace("../index.html");
+  sessionStorage.clear()
+})
+
 
 let preg = [];
 let question = [];
@@ -113,5 +120,5 @@ function guardarInformacionRonda() {
 }
 
 window.onload = () => {
-  guardarInformacionRonda();
+  //guardarInformacionRonda();
 };

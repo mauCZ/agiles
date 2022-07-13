@@ -175,6 +175,12 @@ form div{
 }
 
 
+
+.ocultar{
+  opacity: 0;
+  pointer-events: none;
+}
+
 .err{
   color: red;
   opacity: 0;
@@ -187,4 +193,14 @@ form div{
 
 .box-sesion{
   display: inline-block;
+}
+
+.btn-estilo{
+  cursor: pointer;
+  margin-top: 230px;
+}
+
+.btn-cerrar{
+  opacity: 0;
+  pointer-events: none;
 }

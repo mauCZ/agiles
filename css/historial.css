@@ -51,6 +51,13 @@ table, th, td {
     border-collapse: collapse;
   }
 
+button{
+    font-size: large;
+  font-family: 'Handlee', cursive;
+}
+
+
 .btn-cerrar-sesion{
     cursor: pointer;
+    width: 240px;
 }

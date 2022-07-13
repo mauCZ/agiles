@@ -1,10 +1,9 @@
-let cerrarSesion;
+let cerrarSesion=document.getElementById('cerrarSesion');
 $(function () {
   let contenidoDeLaTablaHistorial = $(".table_body");
   const userName = sessionStorage.getItem("username");
   const templateUser = `
                         <i>${userName}</i>
-                        <button class="btn-cerrar-sesion" id="cerrarSesion">cerrar sesion</button>
                       `;
   const createTemplateUser = (document.getElementById("box-sesion").innerHTML =
     templateUser);
@@ -17,7 +16,10 @@ $(function () {
     }
   });
 });
-window.onload = () => {
-  cerrarSesion = document.getElementById("cerrarSecion");
-  console.log(cerrarSesion);
-}
+
+cerrarSesion.addEventListener('click',() => {
+  console.log('cerando sesion')
+  window.location.replace("../index.html");
+  sessionStorage.clear()
+})
+

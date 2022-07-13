@@ -6,6 +6,9 @@ let close = document.getElementById("close");
 let submit = document.getElementById("submit");
 let errorAuthentication = document.getElementById("err");
 let messageError = document.getElementById("error");
+const cerrarSesion = document.getElementById("cerrarSesion");
+
+
 $(function () {
   localStorage.clear();
   categoryButton.on("click", function (e) {
@@ -36,15 +39,11 @@ close.addEventListener("click", () => {
   formBox.classList.remove("show");
 });
 
-
-
 form.addEventListener("submit", (e) => {
   e.preventDefault();
   const username = document.getElementById("username").value;
   const pass = document.getElementById("pass").value;
-  const data = { username: username, 
-                password: pass 
-              };
+  const data = { username: username, password: pass };
   console.log(data);
   fetch("http://agiles-server.herokuapp.com/api/login", {
     method: "POST",
@@ -61,7 +60,7 @@ form.addEventListener("submit", (e) => {
         sessionStorage.setItem("id", res.id);
         sessionStorage.setItem("username", res.username);
         sessionStorage.setItem("sesionExist", JSON.stringify(res.successful));
-        loadDate()
+        loadDate();
       } else {
         showError(res.successful);
       }
@@ -76,30 +75,31 @@ function showError(message) {
   }
   //messageError.className='show'
 }
-
 function loadDate() {
   const sesionExist = sessionStorage.getItem("sesionExist");
   if (sesionExist == "true") {
-    const userName = sessionStorage.getItem('username')
+    cerrarSesion.classList.remove("btn-cerrar");
+    const userName = sessionStorage.getItem("username");
     const templateUser = `<i class="user-name">${userName}</i> 
-                      <button id="cerrarSesion">Cerrar Sesion</button>`;
-    const sesion = document.getElementById("box-sesion")
-    sesion.innerHTML=templateUser;
+                      `;
+    const sesion = document.getElementById("box-sesion");
+    sesion.innerHTML = templateUser;
     formBox.classList.remove("show");
-    console.log(sesion)
+    open.classList.add("ocultar");
     const showHistory = document
       .getElementById("btn-history")
       .classList.add("show");
+  }else{
+
   }
+  
 }
-let closeSesion = document.getElementById("cerrarSesion")
-console.log(closeSesion)
 
-/*function closeSesion(){
-  sessionStorage.clear()
+cerrarSesion.addEventListener("click", () => {
+  console.log("holaaaaa");
+  sessionStorage.clear();
   window.location.reload()
-}*/
-
+});
 
 
 window.onload = () => {
