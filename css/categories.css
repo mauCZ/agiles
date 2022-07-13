@@ -183,7 +183,7 @@ form div{
 
 .err{
   color: red;
-  opacity: 0;
+  opacity: 1;
 }
 
 .user-name{

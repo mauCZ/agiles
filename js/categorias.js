@@ -4,7 +4,6 @@ let form = document.getElementById("form-in");
 let formBox = document.getElementById("box-form");
 let close = document.getElementById("close");
 let submit = document.getElementById("submit");
-let errorAuthentication = document.getElementById("err");
 let messageError = document.getElementById("error");
 const cerrarSesion = document.getElementById("cerrarSesion");
 
@@ -56,28 +55,23 @@ form.addEventListener("submit", (e) => {
   })
     .then((res) => res.json())
     .then((res) => {
-      console.log(res.successful);
+      console.log(res);
 
-      if (res.successful) {
-        console.log(res.user_id)
-        sessionStorage.setItem("id", res.user_id);
+      if (res.succesfull) {
+        console.log(res.id)
+        messageError.classList.remove('err')
+        sessionStorage.setItem("id", res.id);
         sessionStorage.setItem("username", res.username);
-        sessionStorage.setItem("sesionExist", JSON.stringify(res.successful));
+        sessionStorage.setItem("sesionExist", JSON.stringify(true));
         loadDate();
       } else {
-        showError(res.successful);
+        console.log('error de usuario')
+        messageError.classList.add('err')
+       
       }
     });
 });
 
-function showError(message) {
-  if (message) {
-    messageError.classList.add("show");
-  } else {
-    messageError.classList.add("show");
-  }
-  //messageError.className='show'
-}
 function loadDate() {
   const sesionExist = sessionStorage.getItem("sesionExist");
   if (sesionExist == "true") {
