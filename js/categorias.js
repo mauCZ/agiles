@@ -9,6 +9,8 @@ let messageError = document.getElementById("error");
 const cerrarSesion = document.getElementById("cerrarSesion");
 
 
+
+
 $(function () {
   localStorage.clear();
   categoryButton.on("click", function (e) {
@@ -45,7 +47,7 @@ form.addEventListener("submit", (e) => {
   const pass = document.getElementById("pass").value;
   const data = { username: username, password: pass };
   console.log(data);
-  fetch("http://agiles-server.herokuapp.com/api/login", {
+  fetch("https://agiles-2022.herokuapp.com/login", {
     method: "POST",
     body: JSON.stringify(data),
     headers: {
@@ -57,7 +59,8 @@ form.addEventListener("submit", (e) => {
       console.log(res.successful);
 
       if (res.successful) {
-        sessionStorage.setItem("id", res.id);
+        console.log(res.user_id)
+        sessionStorage.setItem("id", res.user_id);
         sessionStorage.setItem("username", res.username);
         sessionStorage.setItem("sesionExist", JSON.stringify(res.successful));
         loadDate();

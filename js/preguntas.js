@@ -956,7 +956,7 @@ let pc10 = new Question(
   " Con que otro nombre se le conoce a la Monalisa",
   [
     "Son indispensables para la formación de las biomoléculas orgánicas ",
-    "Respuesta 2Pueden ser variables o indispensables y constituyen el  96% de la materia viva ",
+    "Pueden ser variables o indispensables y constituyen el  96% de la materia viva ",
     "Son C, H, O, N, S, P, Fe, Ca, Na, K y Mg",
     "Incluyen, entre otros, los oligoelementos, cuya proporción es inferior al 0,1% ",
   ],
@@ -969,7 +969,7 @@ questionArray.push(pc10);
 let pc11 = new Question(
   "Algunas células animales poseen vacuolas características como es el caso de las vacuolas pulsátiles presentes en: ",
   [
-    "Respuesta 1Los protozoos de agua dulce.",
+    "Los protozoos de agua dulce.",
     "El corazón de los moluscos",
     "Las células contráctiles de los anélidos ",
     "Las células de las esponjas",
