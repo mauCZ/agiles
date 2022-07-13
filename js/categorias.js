@@ -6,31 +6,7 @@ let close = document.getElementById("close");
 let submit = document.getElementById("submit");
 let messageError = document.getElementById("error");
 const cerrarSesion = document.getElementById("cerrarSesion");
-
-let user = [
-  {
-    "id": 1,
-    "username": "usuario1",
-    "password": "12345"
-  },
-  {
-    "id": 2,
-    "username": "usuario2",
-    "password": "12345"
-  },
-  {
-    "id": 3,
-    "username": "usuario3",
-    "password": "12345"
-  },
-  {
-    "id": 4,
-    "username": "usuario4",
-    "password": "12345"
-  }
-]
-
-
+let mostrarHistorialBtn = document.getElementsByClassName("btn-history");
 
 $(function () {
   localStorage.clear();
@@ -56,42 +32,25 @@ $(function () {
 
 open.addEventListener("click", () => {
   formBox.classList.add("show");
-  clearFrom()
+
+  clearFrom();
 });
 
-function clearFrom(){
-  messageError.classList.remove('err')
-  form.reset()
+function clearFrom() {
+  messageError.classList.remove("err");
+  form.reset();
 }
 
 close.addEventListener("click", () => {
-  messageError.classList.remove('err')
+  messageError.classList.remove("err");
   formBox.classList.remove("show");
-  console.log("CERRATE")
 });
 
-function buscarUsuario(username, password) {
-  for (let item of user) {
-    console.log(item);
-    if (item.username == username && item.password == password) {
-      return {
-        "id": item.id,
-        "username": item.username,
-        "password": item.password,
-        "successful": true
-      };
-    }
-  }
-  return false;
-};
-
 form.addEventListener("submit", (e) => {
-  console.log(e.target)
   e.preventDefault();
   const username = document.getElementById("username").value;
   const pass = document.getElementById("pass").value;
   const data = { username: username, password: pass };
-  // console.log(data);
   fetch("https://agiles-2022.herokuapp.com/login", {
     method: "POST",
     body: JSON.stringify(data),
@@ -101,44 +60,17 @@ form.addEventListener("submit", (e) => {
   })
     .then((res) => res.json())
     .then((res) => {
-      // console.log(res);
-
       if (res.succesfull) {
-        // console.log(res.id)
-        messageError.classList.remove('err')
+        messageError.classList.remove("err");
         sessionStorage.setItem("id", res.id);
         sessionStorage.setItem("username", res.username);
         sessionStorage.setItem("sesionExist", JSON.stringify(true));
         loadDate();
       } else {
-        // console.log('error de usuario')
-        messageError.classList.add('err')
-       
+        messageError.classList.add("err");
       }
     });
 });
-//  const password = document.getElementById("pass").value;
-//  let res = buscarUsuario(username, password);
-//
-//  if (res.successful) {
-//    sessionStorage.setItem("id", res.id);
-//    sessionStorage.setItem("username", res.username);
-//    sessionStorage.setItem("sesionExist", res.successful);
-//    loadDate();
-//  } else {
-//    showError(res.successful);
-//  }
-//});
-//function showError(message) {
-//  if (message) {
-//    messageError.classList.add("show");
-//  } else {
-//    messageError.classList.add("show");
-//  }
-//  //messageError.className='show'
-//}
-
-
 
 function loadDate() {
   const sesionExist = sessionStorage.getItem("sesionExist");
@@ -155,20 +87,15 @@ function loadDate() {
       .getElementById("btn-history")
       .classList.add("show");
   } else {
-
   }
-
 }
 
 cerrarSesion.addEventListener("click", () => {
-  console.log("holaaaaa");
   sessionStorage.clear();
-  window.location.reload()
+  window.location.reload();
 });
-
-
-
 window.onload = () => {
+  mostrarHistorialBtn[0].classList.add("show");
+  mostrarHistorialBtn[1].classList.add("show");
   loadDate();
-  
 };

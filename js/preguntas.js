@@ -82,12 +82,7 @@ questionArray.push(pregunta4);
 
 let pregunta5 = new Question(
   "El producto final de la glucolisis es:",
-  [
-  "Glucosa",
-  "Glucógeno",
-  "CO2 y H2O",
-  "Ácido pirúvico"
-  ],
+  ["Glucosa", "Glucógeno", "CO2 y H2O", "Ácido pirúvico"],
   4,
   "ciencias",
   "dificil"
@@ -716,7 +711,12 @@ questionArray.push(pa3);
 
 let pa4 = new Question(
   "A qué compositor debemos 'Las bodas de Fígaro'",
-  ["Ludwig van Beethoven.", "Amadeus Mozart.", "Johann Sebastian Bach.", "antonio salieri"],
+  [
+    "Ludwig van Beethoven.",
+    "Amadeus Mozart.",
+    "Johann Sebastian Bach.",
+    "antonio salieri",
+  ],
   1,
   "arte",
   "facil"
@@ -819,7 +819,12 @@ questionArray.push(pa15);
 
 let pa16 = new Question(
   "Cuáles son los tres órdenes clásicos de la arquitectura clásica",
-  ["Dórico, jónico y corintio.", "Mudéjar, neomudéjar y mozárabe.", "Masamento, fuste y capitel.", "ninguno"],
+  [
+    "Dórico, jónico y corintio.",
+    "Mudéjar, neomudéjar y mozárabe.",
+    "Masamento, fuste y capitel.",
+    "ninguno",
+  ],
   0,
   "arte",
   "dificil"
@@ -837,7 +842,12 @@ questionArray.push(pa17);
 
 let pa18 = new Question(
   "Cuál es la pinacoteca más grande de España",
-  ["Museo del Prado.", "Museo Thyssen.", "Museo Nacional de Arte de Cataluña.", "ninguno"],
+  [
+    "Museo del Prado.",
+    "Museo Thyssen.",
+    "Museo Nacional de Arte de Cataluña.",
+    "ninguno",
+  ],
   0,
   "arte",
   "dificil"
@@ -846,7 +856,12 @@ questionArray.push(pa18);
 
 let pa19 = new Question(
   "Cuál es la basílica más grande de la cristiandad",
-  ["La Catedral de Milán.", " San Pedro de El Vaticano.", "La Catedral de Sevilla.", "ninguno"],
+  [
+    "La Catedral de Milán.",
+    " San Pedro de El Vaticano.",
+    "La Catedral de Sevilla.",
+    "ninguno",
+  ],
   1,
   "arte",
   "facil"
@@ -855,7 +870,12 @@ questionArray.push(pa19);
 
 let pa20 = new Question(
   "Cuál es la única construcción religiosa en España que tiene 19 naves",
-  ["La Sagrada Familia.", "La Mezquita de Córdoba.", "La catedral de Santiago de Compostela.", "ninguno"],
+  [
+    "La Sagrada Familia.",
+    "La Mezquita de Córdoba.",
+    "La catedral de Santiago de Compostela.",
+    "ninguno",
+  ],
   1,
   "arte",
   "dificil"
@@ -873,7 +893,12 @@ questionArray.push(pa21);
 
 let pa22 = new Question(
   "En qué museo puedes contemplar la mayor colección de obras de Kandinsky",
-  ["En el Louvre de París.", "En el Hermitage.", "En el Museo de Arte Moderno de Nueva York.", "ninguno"],
+  [
+    "En el Louvre de París.",
+    "En el Hermitage.",
+    "En el Museo de Arte Moderno de Nueva York.",
+    "ninguno",
+  ],
   2,
   "arte",
   "dificil"
@@ -927,7 +952,12 @@ questionArray.push(pa27);
 
 let pa28 = new Question(
   "Cual fue el proposio principal de la torre eiffel",
-  ["Monumento arquetectonico", "Atraer turistas", "Antena de comunicaciones", "ninguno"],
+  [
+    "Monumento arquetectonico",
+    "Atraer turistas",
+    "Antena de comunicaciones",
+    "ninguno",
+  ],
   2,
   "arte",
   "dificil"
@@ -1019,31 +1049,26 @@ let pc14 = new Question(
   "facil"
 );
 
-questionArray.push(pc14)
+questionArray.push(pc14);
 
 let pc15 = new Question(
   "La siguiente microfotografía corresponde a",
   [
-  "El corte transversal de un centriolo",
-  "El corte transversal de la raiz de un flagelo",
-  "El corte transversal del tallo de un cilio ",
-  "El corte transversal de un microtúbulo"
+    "El corte transversal de un centriolo",
+    "El corte transversal de la raiz de un flagelo",
+    "El corte transversal del tallo de un cilio ",
+    "El corte transversal de un microtúbulo",
   ],
   2,
   "ciencias",
   "facil"
 );
 
-questionArray.push(pc15)
+questionArray.push(pc15);
 
 let pc16 = new Question(
   "Cuantas patas tiene una araña?",
-  [
-    "6",
-    "7",
-    "8",
-    "9"
-  ],
+  ["6", "7", "8", "9"],
   2,
   "ciencias",
   "facil"
@@ -1052,12 +1077,7 @@ questionArray.push(pc16);
 
 let pc17 = new Question(
   "Cuantos años llegan a vivir en libertad los elefantes?",
-  [
-    "20-40 años",
-    "40-60 años",
-    "60-80 años",
-    "80-100 años"
-  ],
+  ["20-40 años", "40-60 años", "60-80 años", "80-100 años"],
   1,
   "ciencias",
   "dificil"
@@ -1066,12 +1086,7 @@ questionArray.push(pc17);
 
 let pc18 = new Question(
   "Cual es el animal que mas personas mata en un año en el mundo?",
-  [
-    "mosquito",
-    "serpiente",
-    "araña",
-    "cocodrilo"
-  ],
+  ["mosquito", "serpiente", "araña", "cocodrilo"],
   0,
   "ciencias",
   "facil"
@@ -1080,12 +1095,7 @@ questionArray.push(pc18);
 
 let pc19 = new Question(
   "Que año fallecio Albert Einstein?",
-  [
-    "1953",
-    "1954",
-    "1955",
-    "1956"
-  ],
+  ["1953", "1954", "1955", "1956"],
   2,
   "ciencias",
   "dificil"
@@ -1098,7 +1108,7 @@ let pc20 = new Question(
     "3.5 billones de años",
     "4.5 billones de años",
     "5.5 billones de años",
-    "6.5 billones de años"
+    "6.5 billones de años",
   ],
   1,
   "ciencias",
@@ -1112,7 +1122,7 @@ let pc21 = new Question(
     "6.000 millones de años",
     "10.000 millones de años",
     "14.000 millones de años",
-    "16.000 millones de años"
+    "16.000 millones de años",
   ],
   2,
   "ciencias",
@@ -1120,45 +1130,34 @@ let pc21 = new Question(
 );
 questionArray.push(pc21);
 
-
 let pd16 = new Question(
   "¿Cuántos Km de distancia mide una maratón?",
-  [
-  "41.85 km",
-  "42.16 km",
-  "43.77 km",
-  "43.45 km"
-  ],
+  ["41.85 km", "42.16 km", "43.77 km", "43.45 km"],
   1,
   "deporte",
   "dificil"
 );
 
-questionArray.push(pd16)
+questionArray.push(pd16);
 
 let pd17 = new Question(
   "¿Cuáles son los cinco colores del anillo de los Juegos Olímpicos?",
   [
-  "Azul, rojo, amarillo, verde y negro",
-  "Azul, rojo, amarillo, verde y violeta",
-  "índigo, rojo, morado, verde y negro",
-  "Azul, rojo, amarillo, naranja y verde"
+    "Azul, rojo, amarillo, verde y negro",
+    "Azul, rojo, amarillo, verde y violeta",
+    "índigo, rojo, morado, verde y negro",
+    "Azul, rojo, amarillo, naranja y verde",
   ],
   0,
   "deporte",
   "facil"
 );
 
-questionArray.push(pd17)
+questionArray.push(pd17);
 
 let pd18 = new Question(
   "¿Qué deporte tiene un equipo llamado foil?",
-  [
-  "polo",
-  "golf",
-  "Esgrima",
-  "boxeo"
-  ],
+  ["polo", "golf", "Esgrima", "boxeo"],
   2,
   "deporte",
   "dificil"
@@ -1166,233 +1165,165 @@ let pd18 = new Question(
 
 let pd19 = new Question(
   "¿Qué deporte de los Juegos Olímpicos implica pliegues y picas?",
-  [
-  "natacion",
-  "bolos",
-  "Esgrima",
-  "polo"
-  ],
+  ["natacion", "bolos", "Esgrima", "polo"],
   0,
   "deporte",
   "dificil"
 );
 
-questionArray.push(pd19)
+questionArray.push(pd19);
 
 let pd20 = new Question(
   "¿Manny Pacquiao es un boxeador legendario de qué país?",
-  [
-  "corea",
-  "filipinas",
-  "mexico",
-  "china"
-  ],
+  ["corea", "filipinas", "mexico", "china"],
   1,
   "deporte",
   "facil"
 );
 
-questionArray.push(pd20)
-
+questionArray.push(pd20);
 
 let pd21 = new Question(
   "¿Cuánto dura un round típico de boxeo para hombres?",
-  [
-  "2 minutos",
-  "3 minutos",
-  "4 minutos",
-  "5 minutos"
-  ],
+  ["2 minutos", "3 minutos", "4 minutos", "5 minutos"],
   1,
   "deporte",
   "facil"
 );
 
-questionArray.push(pd21)
+questionArray.push(pd21);
 
 let pd22 = new Question(
   "¿Cuántos puntos vale un tiro libre en baloncesto?",
-  [
-  "3 puntos",
-  "5 puntos",
-  "2 puntos",
-  "1 punto"
-  ],
+  ["3 puntos", "5 puntos", "2 puntos", "1 punto"],
   3,
   "deporte",
   "facil"
 );
 
-questionArray.push(pd22)
+questionArray.push(pd22);
 
 let pd23 = new Question(
   "¿Qué parte de tu cuerpo no debe tocar el balón en el fútbol?",
-  [
-  "cabeza",
-  "pierna",
-  "mano",
-  "espalda"
-  ],
+  ["cabeza", "pierna", "mano", "espalda"],
   2,
   "deporte",
   "facil"
 );
-questionArray.push(pd23)
+questionArray.push(pd23);
 
 let pd24 = new Question(
   "¿Cuál de los siguientes deportes no usa una pelota?",
-  [
-  "golf",
-  "tenis",
-  "hockey",
-  "polo"
-  ],
+  ["golf", "tenis", "hockey", "polo"],
   2,
   "deporte",
   "dificil"
 );
-questionArray.push(pd24)
+questionArray.push(pd24);
 
 let pd25 = new Question(
   "¿Cuántos jugadores hay en un equipo de béisbol?",
-  [
-  "10",
-  "9",
-  "8",
-  "7"
-  ],
+  ["10", "9", "8", "7"],
   1,
   "deporte",
   "dificil"
 );
-questionArray.push(pd25)
+questionArray.push(pd25);
 
 let pd26 = new Question(
   "¿Cuál es el significado de NBA?",
   [
-  "Administración Nacional de Canasta",
-  "Administración Nacional de Baloncesto",
-  "Asociación Nacional de Basquetbol",
-  "Administración Nacional de Canasta"
+    "Administración Nacional de Canasta",
+    "Administración Nacional de Baloncesto",
+    "Asociación Nacional de Basquetbol",
+    "Administración Nacional de Canasta",
   ],
   2,
   "deporte",
   "dificil"
 );
-questionArray.push(pd26)
+questionArray.push(pd26);
 
 let pd27 = new Question(
   "En baloncesto, el jugador que trae la pelota al otro lado de la cancha y corre la ofensiva se llama:",
-  [
-  "pivot",
-  "delantero",
-  "alero",
-  "base"
-  ],
+  ["pivot", "delantero", "alero", "base"],
   3,
   "deporte",
   "dificil"
 );
-questionArray.push(pd27)
-
+questionArray.push(pd27);
 
 let pd28 = new Question(
   "¿Cómo llamas a la cancha de fútbol?",
-  [
-  "terreno de juego",
-  "corte",
-  "campo",
-  "bol"
-  ],
+  ["terreno de juego", "corte", "campo", "bol"],
   0,
   "deporte",
   "facil"
 );
-questionArray.push(pd28)
+questionArray.push(pd28);
 
 let pd29 = new Question(
   "¿Cuántos rounds hay en un solo juego de boxeo profesional?",
-  [
-  "6",
-  "8",
-  "12",
-  "15"
-  ],
+  ["6", "8", "12", "15"],
   2,
   "deporte",
   "facil"
 );
-questionArray.push(pd29)
+questionArray.push(pd29);
 
 let pd30 = new Question(
   "¿En el boxeo, TKO significa?",
   [
-  "Imitación técnica",
-  "Expulsión técnica",
-  "Krankout Técnico",
-  "Noqueo técnico"
+    "Imitación técnica",
+    "Expulsión técnica",
+    "Krankout Técnico",
+    "Noqueo técnico",
   ],
   3,
   "deporte",
   "dificil"
 );
-questionArray.push(pd30)
+questionArray.push(pd30);
 
 let pd31 = new Question(
   "Es el único deporte en el que los competidores corren hacia la meta, pero nunca la cruzan. ¿Qué es?",
-  [
-  "atletismo",
-  "lanzamiento de jabalina",
-  "natación",
-  "carrera de 800 metros"
-  ],
+  ["atletismo", "lanzamiento de jabalina", "natación", "carrera de 800 metros"],
   2,
   "deporte",
   "dificil"
 );
-questionArray.push(pd31)
+questionArray.push(pd31);
 
 let pd32 = new Question(
   "¿Cuál era el nombre del primer caballo ganador en la carrera de caballos Grand National en 1839?",
-  [
-  "Afortunado",
-  "Campeon",
-  "Loteria",
-  "Jugador"
-  ],
+  ["Afortunado", "Campeon", "Loteria", "Jugador"],
   2,
   "deporte",
   "dificil"
 );
-questionArray.push(pd32)
+questionArray.push(pd32);
 
 let pd33 = new Question(
   "¿Cuál era el nombre de los deportes ficticios en Harry Potter?",
-  [
-  "Quidditch",
-  "Torneo de los tres magos",
-  "Greenwich",
-  "Fidditch"
-  ],
+  ["Quidditch", "Torneo de los tres magos", "Greenwich", "Fidditch"],
   0,
   "deporte",
   "facil"
 );
-questionArray.push(pd33)
+questionArray.push(pd33);
 
 let ph01 = new Question(
   "La contienda bélica que tuvo como consecuencia final la pérdida de la salida soberana al mar fue:",
   [
-  "Guerra del Pacifico",
-  "Guerra del Chaco",
-  "Guerra del acre",
-  "Guerra del estaño"
+    "Guerra del Pacifico",
+    "Guerra del Chaco",
+    "Guerra del acre",
+    "Guerra del estaño",
   ],
   0,
   "historia",
   "facil"
 );
-questionArray.push(ph01)
+questionArray.push(ph01);
 
-
-export { questionArray , Question };
+export { questionArray, Question };

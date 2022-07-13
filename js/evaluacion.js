@@ -1,4 +1,4 @@
-let cerrarSesion = document.getElementById('cerrarSesion')
+let cerrarSesion = document.getElementById("cerrarSesion");
 const userExist = sessionStorage.getItem("sesionExist");
 if (userExist) {
   const userName = sessionStorage.getItem("username");
@@ -10,12 +10,10 @@ if (userExist) {
     templateUser);
 }
 
-cerrarSesion.addEventListener('click',() => {
-  console.log('cerando sesion')
+cerrarSesion.addEventListener("click", () => {
   window.location.replace("../index.html");
-  sessionStorage.clear()
-})
-
+  sessionStorage.clear();
+});
 
 let preg = [];
 let question = [];
@@ -67,7 +65,6 @@ $(function () {
 
   correctasElem.text(preguntasCorrectas);
   incorrectasElem.text(preguntasIncorrectas);
-  console.log(difficultValue);
   difficult.text(difficultValue);
 
   let mensajeElem = $("#mensaje");
@@ -76,7 +73,7 @@ $(function () {
       color: "darkred",
       "font-weight": "bold",
     });
-    
+
     mensajeElem.text("VUELVE A INTENTARLO :(");
   } else {
     mensajeElem.css({
@@ -86,29 +83,35 @@ $(function () {
     mensajeElem.text("¡BUEN TRABAJO!");
   }
 });
-const date = new Date()
-let fechaActual = String(date.getDate()).padStart(2, '0') + '/' + String(date.getMonth() + 1).padStart(2, '0') + '/' + date.getFullYear();
-    console.log( fechaActual)
+const date = new Date();
+let fechaActual =
+  String(date.getDate()).padStart(2, "0") +
+  "/" +
+  String(date.getMonth() + 1).padStart(2, "0") +
+  "/" +
+  date.getFullYear();
 
 function guardarInformacionRonda() {
   if (userExist) {
     const idUser = sessionStorage.getItem("id");
-    console.log(idUser);
     const difficult = localStorage.getItem("difficult");
     const questionsNumber = localStorage.getItem("questionsNumber");
     const respuestasCorrectas = localStorage.getItem("correctos");
     const category = localStorage.getItem("category");
-    let fechaActual = String(date.getDate()).padStart(2, '0') + '/' + String(date.getMonth() + 1).padStart(2, '0') + '/' + date.getFullYear();
-    console.log(fechaActual)
+    let fechaActual =
+      String(date.getDate()).padStart(2, "0") +
+      "/" +
+      String(date.getMonth() + 1).padStart(2, "0") +
+      "/" +
+      date.getFullYear();
     const data = {
-      id:idUser,
-      fecha:fechaActual,
+      id: idUser,
+      fecha: fechaActual,
       puntaje: respuestasCorrectas,
       dificultad: difficult,
       cantidadpreguntas: questionsNumber,
       categoria: category,
     };
-    console.log(data);
     fetch(`https://agiles-2022.herokuapp.com/historial`, {
       method: "POST",
       body: JSON.stringify(data),
@@ -117,14 +120,9 @@ function guardarInformacionRonda() {
       },
     })
       .then((res) => res.json())
-      .then((res) => {
-        console.log(res);
-      });
-  } else {
-    console.log("no se guardo nada");
+      .then((res) => {});
   }
 }
-
 window.onload = () => {
   guardarInformacionRonda();
 };

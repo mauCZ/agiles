@@ -5,7 +5,6 @@
   margin: 0;
   box-sizing: border-box;
 }
-
 body {
   min-height: 100vh;
   align-items: center;
@@ -20,13 +19,13 @@ main {
 
 h2 {
   text-align: center;
-  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
 }
 
 button {
   width: 200px;
   font-size: large;
-  font-family: 'Handlee', cursive;
+  font-family: "Handlee", cursive;
 }
 
 button a {
@@ -38,11 +37,11 @@ button a {
 .categories {
   padding: 30px 24px;
   display: grid;
-  grid-template-areas: "arte      ciencias"
+  grid-template-areas:
+    "arte      ciencias"
     "deporte  historia "
     "variado   variado"
-    "none       difficult-elem"
-  ;
+    "none       difficult-elem";
   justify-content: center;
   grid-row-gap: 10px;
   grid-column-gap: 22px;
@@ -74,10 +73,9 @@ a i {
 }
 
 .difficult {
-
   width: 200px;
   font-size: large;
-  font-family: 'Handlee', cursive;
+  font-family: "Handlee", cursive;
   cursor: pointer;
 }
 
@@ -85,9 +83,6 @@ a i {
   grid-area: variado;
   width: auto;
 }
-
-
-
 select option {
   cursor: pointer;
 }
@@ -102,6 +97,7 @@ select option {
 
 .btn-history {
   cursor: pointer;
+  pointer-events: none;
   opacity: 0;
 }
 
@@ -113,7 +109,6 @@ select option {
   width: 100%;
   display: flex;
   justify-content: space-between;
-  
 }
 
 .box-cat {
@@ -123,12 +118,12 @@ select option {
   align-content: center;
 }
 
-.box-form{
+.box-form {
   display: flex;
   background-color: rgba(0, 0, 0, 0.3);
   align-items: center;
   justify-content: center;
-  position:fixed;
+  position: fixed;
   pointer-events: none;
   opacity: 0;
   top: 0;
@@ -137,70 +132,66 @@ select option {
   width: 100vw;
 }
 
-.form{
+.form {
   background-color: #fff;
   width: 500px;
   max-width: 100%;
   padding: 50px 80px;
   border-radius: 5px;
-  box-shadow: 0 2px 3px ;
+  box-shadow: 0 2px 3px;
 }
 
-h3{
+h3 {
   text-align: center;
 }
 
-form div{
+form div {
   margin: 10px;
 }
 
-.btn-form{
-  display:inline-block;
+.btn-form {
+  display: inline-block;
   margin: 10px;
   margin-left: 50px;
   align-self: center;
   justify-items: center;
 }
 
-
-
-.btn-form button{
+.btn-form button {
   margin: 10px;
   cursor: pointer;
 }
 
-.show{
+.show {
   pointer-events: auto;
   opacity: 1;
 }
 
-
-
-.ocultar{
+.ocultar {
   opacity: 0;
   pointer-events: none;
 }
 
-.err{
+.err {
   color: red;
   opacity: 1;
 }
 
-.user-name{
+.user-name {
   font-size: 20px;
   margin: 30px 20px 35px 30px;
 }
 
-.box-sesion{
+.box-sesion {
   display: inline-block;
 }
 
-.btn-estilo{
+.btn-estilo {
   cursor: pointer;
   margin-top: 230px;
 }
 
-.btn-cerrar{
+.btn-cerrar {
   opacity: 0;
   pointer-events: none;
 }
