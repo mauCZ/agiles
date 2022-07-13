@@ -86,9 +86,7 @@ a i {
   width: auto;
 }
 
-i {
-  display: inline-block;
-}
+
 
 select option {
   cursor: pointer;
@@ -104,9 +102,12 @@ select option {
 
 .btn-history {
   cursor: pointer;
+  opacity: 0;
 }
+
 .btn-ranking {
-  cursor:pointer; 
+  cursor: pointer;
+  opacity: 0;
 }
 
 .btn-iniciar {
@@ -127,15 +128,84 @@ select option {
   align-content: center;
 }
 
-.form {
-  background-color: rgba(0, 0, 0, .8);
-  position: fixed;
-  top: -250px;
-  right: 0;
-  bottom: 0;
+.box-form{
+  display: flex;
+  background-color: rgba(0, 0, 0, 0.3);
+  align-items: center;
+  justify-content: center;
+  position:fixed;
+  pointer-events: none;
+  opacity: 0;
+  top: 0;
   left: 0;
+  height: 100vh;
+  width: 100vw;
+}
+
+.form{
+  background-color: #fff;
+  width: 500px;
+  max-width: 100%;
+  padding: 50px 80px;
+  border-radius: 5px;
+  box-shadow: 0 2px 3px ;
+}
+
+h3{
+  text-align: center;
+}
+
+form div{
+  margin: 10px;
+}
+
+.btn-form{
+  display:inline-block;
+  margin: 10px;
+  margin-left: 50px;
+  align-self: center;
+  justify-items: center;
+}
+
+
+
+.btn-form button{
+  margin: 10px;
+  cursor: pointer;
+}
+
+.show{
+  pointer-events: auto;
+  opacity: 1;
+}
+
+
+
+.ocultar{
   opacity: 0;
   pointer-events: none;
-  transition: all 1s;
+}
 
+.err{
+  color: red;
+  opacity: 0;
+}
+
+.user-name{
+  font-size: 20px;
+  margin: 30px 20px 35px 30px;
+}
+
+.box-sesion{
+  display: inline-block;
+}
+
+.btn-estilo{
+  cursor: pointer;
+  margin-top: 230px;
+}
+
+.btn-cerrar{
+  opacity: 0;
+  pointer-events: none;
 }

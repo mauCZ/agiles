@@ -8,8 +8,6 @@
     margin-left: 50%;
 }
 
-
-
 h1{
     text-align: center;
 }
@@ -19,6 +17,17 @@ h1{
     font-size: medium;
     padding: 10px;
     cursor: pointer;
+}
+
+.box-sesion{
+    text-align: right;
+    font-size: 20px;
+    
+}
+
+.box-sesion button{
+    font-size: 18px;
+    width: 200px;   
 }
 
 table {
@@ -41,3 +50,14 @@ table, th, td {
     border: 1px solid black;
     border-collapse: collapse;
   }
+
+button{
+    font-size: large;
+  font-family: 'Handlee', cursive;
+}
+
+
+.btn-cerrar-sesion{
+    cursor: pointer;
+    width: 240px;
+}
