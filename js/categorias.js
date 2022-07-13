@@ -4,7 +4,6 @@ let form = document.getElementById("form-in");
 let formBox = document.getElementById("box-form");
 let close = document.getElementById("close");
 let submit = document.getElementById("submit");
-let errorAuthentication = document.getElementById("err");
 let messageError = document.getElementById("error");
 const cerrarSesion = document.getElementById("cerrarSesion");
 
@@ -57,9 +56,16 @@ $(function () {
 
 open.addEventListener("click", () => {
   formBox.classList.add("show");
+  clearFrom()
 });
 
+function clearFrom(){
+  messageError.classList.remove('err')
+  form.reset()
+}
+
 close.addEventListener("click", () => {
+  messageError.classList.remove('err')
   formBox.classList.remove("show");
 });
 
@@ -81,28 +87,58 @@ function buscarUsuario(username, password) {
 form.addEventListener("submit", (e) => {
   e.preventDefault();
   const username = document.getElementById("username").value;
-  const password = document.getElementById("pass").value;
-  let res = buscarUsuario(username, password);
 
-  if (res.successful) {
-    sessionStorage.setItem("id", res.id);
-    sessionStorage.setItem("username", res.username);
-    sessionStorage.setItem("sesionExist", res.successful);
-    loadDate();
-  } else {
-    showError(res.successful);
-  }
+  const pass = document.getElementById("pass").value;
+  const data = { username: username, password: pass };
+  console.log(data);
+  fetch("https://agiles-2022.herokuapp.com/login", {
+    method: "POST",
+    body: JSON.stringify(data),
+    headers: {
+      "Content-type": "application/json",
+    },
+  })
+    .then((res) => res.json())
+    .then((res) => {
+      console.log(res);
+
+      if (res.succesfull) {
+        console.log(res.id)
+        messageError.classList.remove('err')
+        sessionStorage.setItem("id", res.id);
+        sessionStorage.setItem("username", res.username);
+        sessionStorage.setItem("sesionExist", JSON.stringify(true));
+        loadDate();
+      } else {
+        console.log('error de usuario')
+        messageError.classList.add('err')
+       
+      }
+    });
 });
+//  const password = document.getElementById("pass").value;
+//  let res = buscarUsuario(username, password);
+//
+//  if (res.successful) {
+//    sessionStorage.setItem("id", res.id);
+//    sessionStorage.setItem("username", res.username);
+//    sessionStorage.setItem("sesionExist", res.successful);
+//    loadDate();
+//  } else {
+//    showError(res.successful);
+//  }
+//});
+//function showError(message) {
+//  if (message) {
+//    messageError.classList.add("show");
+//  } else {
+//    messageError.classList.add("show");
+//  }
+//  //messageError.className='show'
+//}
 
 
-function showError(message) {
-  if (message) {
-    messageError.classList.add("show");
-  } else {
-    messageError.classList.add("show");
-  }
-  //messageError.className='show'
-}
+
 function loadDate() {
   const sesionExist = sessionStorage.getItem("sesionExist");
   if (sesionExist == "true") {
@@ -130,6 +166,8 @@ cerrarSesion.addEventListener("click", () => {
 });
 
 
+
 window.onload = () => {
   loadDate();
+  
 };

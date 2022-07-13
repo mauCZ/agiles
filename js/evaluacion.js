@@ -1,4 +1,3 @@
-//import { questionArray, Question } from "./preguntas.js";
 let cerrarSesion = document.getElementById('cerrarSesion')
 const userExist = sessionStorage.getItem("sesionExist");
 if (userExist) {
@@ -87,6 +86,9 @@ $(function () {
     mensajeElem.text("¡BUEN TRABAJO!");
   }
 });
+const date = new Date()
+let fechaActual = String(date.getDate()).padStart(2, '0') + '/' + String(date.getMonth() + 1).padStart(2, '0') + '/' + date.getFullYear();
+    console.log( fechaActual)
 
 function guardarInformacionRonda() {
   if (userExist) {
@@ -96,14 +98,18 @@ function guardarInformacionRonda() {
     const questionsNumber = localStorage.getItem("questionsNumber");
     const respuestasCorrectas = localStorage.getItem("correctos");
     const category = localStorage.getItem("category");
+    let fechaActual = String(date.getDate()).padStart(2, '0') + '/' + String(date.getMonth() + 1).padStart(2, '0') + '/' + date.getFullYear();
+    console.log(fechaActual)
     const data = {
+      id:idUser,
+      fecha:fechaActual,
       puntaje: respuestasCorrectas,
       dificultad: difficult,
-      cantidad_preguntas: questionsNumber,
+      cantidadpreguntas: questionsNumber,
       categoria: category,
     };
     console.log(data);
-    fetch(`http://agiles-server.herokuapp.com/api/puntuaciones/${idUser}`, {
+    fetch(`https://agiles-2022.herokuapp.com/historial`, {
       method: "POST",
       body: JSON.stringify(data),
       headers: {
@@ -120,5 +126,5 @@ function guardarInformacionRonda() {
 }
 
 window.onload = () => {
-  //guardarInformacionRonda();
+  guardarInformacionRonda();
 };
