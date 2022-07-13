@@ -7,6 +7,30 @@ let submit = document.getElementById("submit");
 let messageError = document.getElementById("error");
 const cerrarSesion = document.getElementById("cerrarSesion");
 
+let user = [
+  {
+    "id": 1,
+    "username": "usuario1",
+    "password": "12345"
+  },
+  {
+    "id": 2,
+    "username": "usuario2",
+    "password": "12345"
+  },
+  {
+    "id": 3,
+    "username": "usuario3",
+    "password": "12345"
+  },
+  {
+    "id": 4,
+    "username": "usuario4",
+    "password": "12345"
+  }
+]
+
+
 
 $(function () {
   localStorage.clear();
@@ -45,9 +69,25 @@ close.addEventListener("click", () => {
   formBox.classList.remove("show");
 });
 
+function buscarUsuario(username, password) {
+  for (let item of user) {
+    console.log(item);
+    if (item.username == username && item.password == password) {
+      return {
+        "id": item.id,
+        "username": item.username,
+        "password": item.password,
+        "successful": true
+      };
+    }
+  }
+  return false;
+};
+
 form.addEventListener("submit", (e) => {
   e.preventDefault();
   const username = document.getElementById("username").value;
+
   const pass = document.getElementById("pass").value;
   const data = { username: username, password: pass };
   console.log(data);
@@ -76,6 +116,28 @@ form.addEventListener("submit", (e) => {
       }
     });
 });
+//  const password = document.getElementById("pass").value;
+//  let res = buscarUsuario(username, password);
+//
+//  if (res.successful) {
+//    sessionStorage.setItem("id", res.id);
+//    sessionStorage.setItem("username", res.username);
+//    sessionStorage.setItem("sesionExist", res.successful);
+//    loadDate();
+//  } else {
+//    showError(res.successful);
+//  }
+//});
+//function showError(message) {
+//  if (message) {
+//    messageError.classList.add("show");
+//  } else {
+//    messageError.classList.add("show");
+//  }
+//  //messageError.className='show'
+//}
+
+
 
 function loadDate() {
   const sesionExist = sessionStorage.getItem("sesionExist");
@@ -91,10 +153,10 @@ function loadDate() {
     const showHistory = document
       .getElementById("btn-history")
       .classList.add("show");
-  }else{
+  } else {
 
   }
-  
+
 }
 
 cerrarSesion.addEventListener("click", () => {
